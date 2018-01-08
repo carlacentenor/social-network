@@ -1,0 +1,82 @@
+:root{
+  --green :#00bfa5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.img-user {
+  width: 5em;
+  height: 5em;
+  border-radius: 100px;
+}
+
+.user {
+  margin: 0 auto;
+  width: 30%;
+  height: 18vh;
+  padding: 1em;
+
+}
+
+.border-photo-user {
+  width: 5em;
+  height: 5em;
+  margin: 0;
+}
+
+.user-name {
+  font-weight: 900;
+}
+
+
+
+
+
+.new-post{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+/**Post.html*/
+.header-post{
+  background-color:var(--green);
+  height: 9vh;
+}
+
+.back{
+color: white;
+
+float: left;
+}
+
+.back i {
+  font-size: 4em;
+}
+
+.btn-post{
+ float: right;
+  color: white;
+  padding: 1em;
+  background-color: transparent;
+  border: none;
+}
+
+.box-new-post{
+  margin: 1em;
+}
+
+.post-user{
+  border: 2px solid #03ddc0  ;
+  border-radius: 10px;
+  height: 18vh;
+  padding:10px;
+  outline: none;
+}

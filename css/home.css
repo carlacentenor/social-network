@@ -3,9 +3,7 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  
   font-family: 'Roboto', sans-serif;
 }
 
@@ -19,21 +17,21 @@
 
 .user {
   margin: 0 auto;
-  width: 30%;
-  height: 18vh;
+  width: 100%;
+  height: auto;
   padding: 1em;
-
+text-align: center;
 }
 
 .border-photo-user {
-  width: 5em;
-  height: 5em;
+  text-align: center;
   margin: 0;
 }
 
 .user-name {
   font-weight: 900;
 }
+
 
 
 
@@ -61,16 +59,28 @@ float: left;
   font-size: 4em;
 }
 
-.btn-post{
- float: right;
-  color: white;
-  padding: 1em;
-  background-color: transparent;
-  border: none;
+.btn-post i {
+  margin-left:10px ;
 }
 
-.box-new-post{
-  margin: 1em;
+.border-post{
+  
+  border: 1px solid#03ddc0 ;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.border-post p {
+  padding: 10px;
+}
+
+.box-post-new{
+  margin-top: 10px;
+  
+}
+
+.box-img-post{
+  overflow: auto;
 }
 
 .post-user{
@@ -79,4 +89,32 @@ float: left;
   height: 18vh;
   padding:10px;
   outline: none;
+}
+
+.img-user-post{
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100px;
+  
+}
+
+.user-name-post {
+  float: left;
+  margin-left: 10px;
+  font-weight: 900;
+  position: relative;
+  bottom: 4px;
+}
+
+.border-photo-post-user{
+float: left;
+  margin: 0;
+}
+
+.container-post{
+  padding: 1em;
+}
+
+#profile {
+  display: none;
 }

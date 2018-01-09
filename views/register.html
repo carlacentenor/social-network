@@ -1,41 +1,76 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Our Kids</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <link rel="stylesheet" href="../css/main.css">
-  <title>Register</title>
+  <link rel="icon" href="../assets/images/our-kids.png">
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAXr5SfXVJQ_jCyB8w33CaaNZPuTPZeQAI",
+      authDomain: "our-kids-47772.firebaseapp.com",
+      databaseURL: "https://our-kids-47772.firebaseio.com",
+      projectId: "our-kids-47772",
+      storageBucket: "our-kids-47772.appspot.com",
+      messagingSenderId: "208252014214"
+    };
+    firebase.initializeApp(config);
+  </script>
 </head>
+
 <body>
   <div class="row">
-    <form class="col s12">
+    <div class="col s12">
       <div class="row">
-        <h1>Registro</h1>
-        <div class="input-field col s6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate name">
-          <label for="icon_prefix">email</label>
+        <div class="col m12 center">
+          <div class="input-field">
+            <h3>Login</h3>
+            <i class="material-icons prefix">account_circle</i>
+            <input id="email" type="email" placeholder="Ingresa email">
+          </div>
+          <div class="input-field">
+            <i class="material-icons prefix">lock</i>
+            <input id="contraseña" type="password" placeholder="Ingresa contraseña">
+            <button onclick="registrar()" class="waves-effect waves-light btn">Next</button>
+            <a class="waves-effect waves-light modal-trigger" href="#modal1">Signup</a>
+          </div>
         </div>
-        <div class="input-field col s6">
-          <i class="material-icons prefix">lock</i>
-          <input id="icon_telephone" type="tel" class="validate password">
-          <label for="icon_telephone">Password</label>
-        </div>
-        <button class="btn waves-effect waves-light" id="btn-send" type="submit" name="action">Submit
-          <i class="material-icons right">send</i>
-        </button>
       </div>
-    </form>
+    </div>
   </div>
 
-  
-  <!-- Inicialización Base de datos-->
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script src="../vendors/js/jquery-3.2.1.min.js"></script>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal center">
+    <div class="modal-content">
+      <div class="input-field">
+        <h4>Signup</h4>
+        <i class="material-icons prefix">account_circle</i>
+        <input id="email2" type="email" placeholder="Ingresa email">
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input id="contraseña2" type="password" placeholder="Ingresa contraseña">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button onclick="ingreso()" class="modal-action modal-close waves-effect waves-green btn">Login</button>
+    </div>
+  </div>
+  <div>
+    <img class="img-bears" src="../assets/images/osos.gif" alt="">
+  </div>
+  <div id="contenido">
+  </div>
+  <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="../vendors/materialize/js/materialize.min.js"></script>
-  <script src="../js/app.js"></script>
   <script src="../js/register.js"></script>
 </body>
+
 </html>

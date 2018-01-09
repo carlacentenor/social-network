@@ -1,3 +1,9 @@
+// efecto preloader
+$(document).ready(function() {
+  setTimeout(function() {
+    window.location.href = 'views/register.html';
+  }, 1000);
+});
 
 // efecto input 
 $(document).ready(function() {

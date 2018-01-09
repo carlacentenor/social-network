@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
 });
@@ -8,10 +8,10 @@ function registrar() {
   var contraseña = document.getElementById('contraseña').value;
 
   firebase.auth().createUserWithEmailAndPassword(email, contraseña)
-    .then(function () {
+    .then(function() {
       verificar();
     })
-    .catch(function (error) {
+    .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -37,7 +37,7 @@ function ingreso() {
 }
 
 function observador() {
-  firebase.auth().onAuthStateChanged(function (user) {
+  firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log('existe usuario activo');
       aparece(user);
@@ -71,18 +71,20 @@ function aparece(user) {
   var contenido = document.getElementById('contenido');
   if (user.emailVerified) {
     contenido.innerHTML = `
-    <p>Bienvenido</p>
-    <button onclick="cerrar()">Cerrar Secion</button>
+    <div class="center">
+    <p>Bienvenido!!</p>
+    <button onclick="cerrar()" class="btn">Cerrar Secion</button>
+    </div>
     `;
   }
 }
 
 function cerrar() {
   firebase.auth().signOut()
-    .then(function () {
+    .then(function() {
       console.log('Saliendo...')
     })
-    .catch(function (error) {
+    .catch(function(error) {
       console.log(error);
     })
 
@@ -90,12 +92,11 @@ function cerrar() {
 
 function verificar() {
   var user = firebase.auth().currentUser;
-  user.sendEmailVerification().then(function () {
+  user.sendEmailVerification().then(function() {
     // Email sent.
     console.log('Enviando correo....');
-  }).catch(function (error) {
+  }).catch(function(error) {
     // An error happened.
     console.log(error);
   });
 }
-

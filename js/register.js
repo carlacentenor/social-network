@@ -27,7 +27,7 @@ function ingreso() {
   var contraseña2 = document.getElementById('contraseña2').value;
   localStorage.email = email2;
   localStorage.password = contraseña2;
-  window.location.href = '../views/home.html';
+  
   firebase.auth().signInWithEmailAndPassword(email2, contraseña2)
     .catch(function(error) {
       // Handle Errors here.
@@ -37,6 +37,7 @@ function ingreso() {
       console.log(errorMessage);
       // ...
     });
+  window.location.href = '../views/home.html';
 }
 
 function observador() {
@@ -69,18 +70,6 @@ function observador() {
 }
 observador();
 
-function aparece(user) {
-  var user = user;
-  var contenido = document.getElementById('contenido');
-  if (user.emailVerified) {
-    contenido.innerHTML = `
-    <div class="center">
-    <p>Bienvenido!!</p>
-    <button onclick="cerrar()" class="btn">Cerrar Secion</button>
-    </div>
-    `;
-  }
-}
 
 function cerrar() {
   firebase.auth().signOut()

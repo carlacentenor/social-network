@@ -25,6 +25,7 @@ $(document).ready(function() {
       $('.img-user-post-new').attr('src', imgUser);
       $('.img-user-profile').attr('src', imgUser);
       $('.poster').css('background-image', 'url("' + posterUser + '")');
+      $('.background-poster').css('background-image', 'url("' + posterUser + '")');
       $('.email-profile  p').text(emailUser);
       $('.age-profile  p').text(ageUser);
       $('.contacts-profile p').text(contactsUser.length);

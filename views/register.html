@@ -26,31 +26,39 @@
 </head>
 
 <body>
-  <div class="row">
-    <div class="col s12">
-      <div class="row">
-        <div class="col m12 center">
-          <div class="input-field">
-            <h3>Login</h3>
-            <i class="material-icons prefix">account_circle</i>
-            <input id="email" type="email" placeholder="Ingresa email">
-          </div>
-          <div class="input-field">
-            <i class="material-icons prefix">lock</i>
-            <input id="contraseña" type="password" placeholder="Ingresa contraseña">
-            <button onclick="registrar()" class="waves-effect waves-light btn">Next</button>
-            <a class="waves-effect waves-light modal-trigger" href="#modal1">Signup</a>
-          </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col s12" id="center">
+        <div class="two-buttons ">
+          <img class="img-logo2 img-responsive" src="../assets/images/our-kids-logo2.png" alt="logo">
+          <a class="waves-effect waves-light modal-trigger btn first-btn1" href="#modal1">Signup</a>
+          <a onclick="ingreso()" class="waves-effect waves-light modal-trigger btn first-btn2" href="#modal2">Login</a>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Modal Structure -->
   <div id="modal1" class="modal center">
     <div class="modal-content">
       <div class="input-field">
-        <h4>Signup</h4>
+        <h3>Signup</h3>
+        <i class="material-icons prefix">account_circle</i>
+        <input id="email" type="email" placeholder="Ingresa email">
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">lock</i>
+        <input id="contraseña" type="password" placeholder="Ingresa contraseña">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button onclick="ingreso()" class="modal-action modal-close waves-effect waves-green btn">Next</button>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal center">
+    <div class="modal-content">
+      <div class="input-field">
+        <h4>Login</h4>
         <i class="material-icons prefix">account_circle</i>
         <input id="email2" type="email" placeholder="Ingresa email">
       </div>
@@ -58,13 +66,10 @@
         <i class="material-icons prefix">lock</i>
         <input id="contraseña2" type="password" placeholder="Ingresa contraseña">
       </div>
+      <div class="modal-footer">
+        <button onclick="ingreso()" class="modal-action modal-close waves-effect waves-green btn">Next</button>
+      </div>
     </div>
-    <div class="modal-footer">
-      <button onclick="ingreso()" class="modal-action modal-close waves-effect waves-green btn">Login</button>
-    </div>
-  </div>
-  <div>
-    <img class="img-bears" src="../assets/images/osos.gif" alt="">
   </div>
   <div id="contenido">
   </div>

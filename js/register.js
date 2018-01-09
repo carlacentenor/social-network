@@ -1,7 +1,7 @@
-$(document).ready(function() {
-  // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-  $('.modal').modal();
-});
+
+// the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+$('.modal').modal();
+
 
 function registrar() {
   var email = document.getElementById('email').value;
@@ -22,11 +22,14 @@ function registrar() {
 }
 
 function ingreso() {
+  event.preventDefault();
   var email2 = document.getElementById('email2').value;
   var contraseña2 = document.getElementById('contraseña2').value;
-
+  localStorage.email = email2;
+  localStorage.password = contraseña2;
+  window.location.href = '../views/home.html';
   firebase.auth().signInWithEmailAndPassword(email2, contraseña2)
-    .catch(function (error) {
+    .catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -82,13 +85,16 @@ function aparece(user) {
 function cerrar() {
   firebase.auth().signOut()
     .then(function() {
-      console.log('Saliendo...')
+      console.log('Saliendo...');
     })
     .catch(function(error) {
       console.log(error);
-    })
-
+    });
 }
+
+$('.close').on('click', function() {
+  cerrar();
+});
 
 function verificar() {
   var user = firebase.auth().currentUser;

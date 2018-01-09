@@ -1,0 +1,197 @@
+:root {
+  --green: #00bfa5;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.img-user {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100px;
+  float: right;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+
+.img-user-profile {
+  width: 10em;
+  height: 10em;
+  border-radius: 100px;
+  position: relative;
+  bottom: 6em;
+  border: 5px solid white;
+}
+
+.img-user-post-new{
+  width: 5em;
+  height: 5em;
+  border-radius: 100px;
+}
+
+.user {
+  margin: 0 auto;
+  width: 100%;
+  height: 19vh;
+  padding: 1em;
+  text-align: center;
+}
+
+.border-photo-user {
+  text-align: center;
+  margin: 0;
+}
+
+.user-name {
+  font-weight: 900;
+  position: relative;
+  bottom: 5em;
+  font-weight: 900;
+}
+
+.user-name-post-new{
+  font-weight: 900;
+  
+  margin: 5px;
+}
+
+.new-post {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+/**Post.html*/
+
+.header-post {
+  background-color: var(--green);
+  height: 9vh;
+}
+
+.back {
+  color: white;
+  float: left;
+}
+
+.back i {
+  font-size: 4em;
+}
+
+.btn-post i {
+  margin-left: 10px;
+}
+
+.border-post,.border-post-contact {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 1em;
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 10px;
+}
+
+.border-post p {
+  margin-top: 10px;
+
+}
+
+.border-post-contact p {
+  margin: 0 10px;
+  position: relative;
+  bottom: 1em;
+  font-size: 20px;
+  
+}
+
+.box-post-new {
+  margin-top: 10px;
+}
+
+.box-img-post {
+  overflow: auto;
+}
+
+.post-user {
+  border: 2px solid #03ddc0;
+  border-radius: 10px;
+  height: 18vh;
+  padding: 10px;
+  outline: none;
+}
+
+.img-user-post {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100px;
+}
+
+.user-name-post {
+  float: left;
+  margin-left: 10px;
+  font-weight: 900;
+  position: relative;
+  bottom: 4px;
+}
+
+.border-photo-post-user {
+  float: left;
+  margin: 0;
+}
+
+.container-post {
+  padding: 1em;
+}
+
+.poster {
+  width: 100%;
+  height: 30vh;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.color {
+  color: var(--green);
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.info-user-profile {
+  padding: 1em;
+}
+
+.img-user-contact{
+  width: 20%;
+
+}
+
+.list-contact{
+  padding: 1em;
+}
+
+.comment{
+  text-align: right;
+}
+
+.align{
+  margin:0 10px;
+  color: #66757F;
+  cursor: pointer;
+}
+
+.star{
+  color: rgb(255, 230, 0);
+  position: relative;
+  bottom: .5em;
+}
+
+.title{
+  font-size: 2.5em;
+  color: #66757F;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin: 10px 0;
+}

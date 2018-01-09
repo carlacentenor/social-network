@@ -1,39 +1,52 @@
 var dataUsers = [
-  {
+  users = [{
     name: 'Laura Lopez',
     email: 'lauralopez@gmail.com',
     photoUser: '../assets/images/user1.jpg',
+    poster: '../assets/images/portada1.jpg',
     password: 123456,
     age: 33,
-    contacts: ['Pedro Carrillo', 'Maria Torres'],
-    post: [{
-      number: 1,
-      text: 'Esta Solución me sirvio vean este link : @@@@@'
-    }]
+    contacts: ['pedrocarrillo@gmail.com', 'mariatorres@gmail.com'],
+    post: 12
   },
   {
     name: 'Pedro Carrillo',
     email: 'pedrocarrillo@gmail.com',
-    photoUser: '../assets/images/user2.jpeg',
+    photoUser: '../assets/images/user2.png',
+    poster: '../assets/images/portada2.jpg',
     password: 123456,
     age: 35,
-    contacts: ['Laura Lopez', 'Maria Torres'],
-    post: [{
-      number: 1,
-      text: 'Esta experiencia me sirvio vean este link : @@@@@'
-    }]
+    contacts: ['lauralopez@gmail.com', 'mariatorres@gmail.com'],
+    post: 13
   },
   {
     name: 'Maria Torres',
     email: 'mariatorres@gmail.com',
     photoUser: '../assets/images/user3.jpg',
+    poster: '../assets/images/portada3.jpeg',
     password: 123456,
     age: 25,
-    contacts: ['Pedro Carrillo', 'Laura Lopez'],
-    post: [{
-      number: 1,
-      text: 'Miren esta app : @@@@@'
-    }]
+    contacts: ['pedrocarrillo@gmail.com', 'lauralopez@gmail.com'],
+    post: 12
   }
+  ],
+  post = [{
+    email: 'lauralopez@gmail.com',
+    text: 'Este resultado me ayudo mucho , miren este link @@@@',
+    
+  },
+  {
+    email: 'mariatorres@gmail.com',
+    text: 'Miren estos juegos  @@@@',
+    
+  },
+  {
+    email: 'pedrocarrillo@gmail.com',
+    text: 'Información importante',
+    
+  }
+
+  ]
+
 
 ];

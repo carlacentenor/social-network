@@ -197,7 +197,7 @@
 }
 
 .center, .rigth , .left{
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   float: left;
 }
 
@@ -232,5 +232,21 @@
  
 }
 
+}
 
+/*estilos de los juegos */
+
+.size-img {
+  width: 190px;
+  height: 150px;
+  border: 2px solid rgb(5, 126, 70);
+  float: left;
+}
+
+.size-img2 {
+  width: 190px;
+  height: 150px;
+  border: 2px solid rgb(0, 0, 0);
+  float: right;
+  display: block;
 }

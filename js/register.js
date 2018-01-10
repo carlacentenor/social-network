@@ -167,6 +167,7 @@ function verificar() {
   user.sendEmailVerification().then(function() {
     // Email sent.
     console.log('Enviando correo....');
+    alert('Revisa tu bandeja de Entrada, te hemos enviado un correo de confirmación');
   }).catch(function(error) {
     // An error happened.
     console.log(error);

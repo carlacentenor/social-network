@@ -353,6 +353,9 @@ body {
    
   }
   
-  
   }
-  
+
+  .img-carrusel {
+    width: 200px;
+    height: 180px;
+  }

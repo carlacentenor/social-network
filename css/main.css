@@ -100,10 +100,19 @@ body {
 
 .btn,
 .btn-large {
-  background-color: rgba(92, 172, 92, 0);
+  background-color: rgba(104, 177, 104, 0);
   color: black;
   border-radius: 5px;
-  border: 1px solid rgb(0, 0, 0);
+  
+}
+
+.btn-style{
+  background-color: #009974;
+  color: white;
+}
+
+#alg-center{
+  text-align: center;
 }
 
 .absolute{
@@ -123,6 +132,10 @@ body {
   width: 50%;
   display: inline-block;
   
+}
+
+.modal{
+  padding: 1em;
 }
 
 /* splash */

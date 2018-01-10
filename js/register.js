@@ -2,12 +2,19 @@
 // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
 $('.modal').modal();
 
+var passwordLogin = $('.password-login');
+var emailLogin = $('.email-login');
+var emailRegister = $('#email');
+var passwordRegisterNew = $('#password-register');
+
+var validatePassword = false;
+var validateEmail = false;
 
 function registrar() {
-  var email = document.getElementById('email').value;
-  var contraseña = document.getElementById('contraseña').value;
+  var email = emailRegister.val();
+  var passwordRegister = passwordRegisterNew.val();
 
-  firebase.auth().createUserWithEmailAndPassword(email, contraseña)
+  firebase.auth().createUserWithEmailAndPassword(email, passwordRegister)
     .then(function() {
       verificar();
     })
@@ -21,13 +28,82 @@ function registrar() {
     });
 }
 
+
+emailRegister.on('keyup', function(event) {
+  var EMAILUSER = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
+  
+  if (EMAILUSER.test($(this).val())) {
+    validateEmail = true;
+    validateRegister();
+  } else {
+    inactiveRegister();
+  }
+});
+
+
+passwordRegisterNew.on('keyup', function(event) {
+  if (passwordRegisterNew.val()) {
+    validatePassword = true;
+    validateRegister();
+  } else {
+    inactiveRegister();
+  }
+});
+
+emailLogin.on('keyup', function(event) {
+  var EMAILUSER = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
+  
+  if (EMAILUSER.test($(this).val())) {
+    validateEmail = true;
+    validateUser();
+  } else {
+    inactiveUser();
+  }
+});
+
+passwordLogin.on('keyup', function(event) {
+  if (passwordLogin.val()) {
+    validatePassword = true;
+    validateUser();
+  } else {
+    inactiveUser();
+  }
+});
+
+function validateUser() {
+  if (validateEmail && validatePassword) {
+    $('.btn-login').attr('disabled', false);
+  }
+}
+
+
+function validateRegister() {
+  if (validateEmail && validatePassword) {
+    $('.btn-register').attr('disabled', false);
+  }
+}
+
+function inactiveRegister() {
+  $('.btn-register').attr('disabled', 'disabled');
+}
+
+function inactiveUser() {
+  $('.btn-login').attr('disabled', 'disabled');
+}
+
 function ingreso() {
   event.preventDefault();
   var email2 = document.getElementById('email2').value;
   var contraseña2 = document.getElementById('contraseña2').value;
   localStorage.email = email2;
   localStorage.password = contraseña2;
-  
+
+  for (i = 0; i < dataUsers[0].length; i++) {
+    if (emailLogin.val() === dataUsers[0][i].email && passwordLogin.val() === dataUsers[0][i].password) {
+      window.location.href = '../views/home.html';
+    }
+  }
+
   firebase.auth().signInWithEmailAndPassword(email2, contraseña2)
     .catch(function(error) {
       // Handle Errors here.
@@ -35,16 +111,17 @@ function ingreso() {
       var errorMessage = error.message;
       console.log(errorCode);
       console.log(errorMessage);
+      
+
       // ...
     });
-  window.location.href = '../views/home.html';
 }
 
 function observador() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log('existe usuario activo');
-      aparece(user);
+      
       // User is signed in.
       var displayName = user.displayName;
 

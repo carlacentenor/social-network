@@ -6,7 +6,7 @@ var dataUsers = [
     poster: '../assets/images/portada1.jpg',
     password: 'laura12345',
     age: '23 de Diciembre',
-    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'lauralucialopez56@gmail.com'],
+    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'josemonteza838@gmail.com', 'rf9718087@gmail.com', 'rosem6427@gmail.com', 'as2382968@gmail.com', 'kevinlaos61@gmail.com', 'sg560591@gmail.com', 'sofialvarado811@gmail.com'],
     post: 12
   },
   {
@@ -16,7 +16,7 @@ var dataUsers = [
     poster: '../assets/images/portada2.jpg',
     password: 'pedro12345',
     age: '27 de Abril',
-    contacts: ['lauralucialopez56@gmail.com', 'mt5545316@gmail.com', 'carrillopedro158@gmail.com'],
+    contacts: ['lauralucialopez56@gmail.com', 'mt5545316@gmail.com', 'josemonteza838@gmail.com', 'rf9718087@gmail.com', 'rosem6427@gmail.com', 'as2382968@gmail.com', 'kevinlaos61@gmail.com', 'sg560591@gmail.com', 'sofialvarado811@gmail.com'],
     post: 13
   },
   {
@@ -26,9 +26,79 @@ var dataUsers = [
     poster: '../assets/images/portada3.jpeg',
     password: 'mariat123',
     age: '01 de Setiembre',
-    contacts: ['carrillopedro158@gmail.com', 'lauralucialopez56@gmail.com', 'mt5545316@gmail.com'],
+    contacts: ['carrillopedro158@gmail.com', 'lauralucialopez56@gmail.com', 'josemonteza838@gmail.com', 'rf9718087@gmail.com', 'rosem6427@gmail.com', 'as2382968@gmail.com', 'kevinlaos61@gmail.com', 'sg560591@gmail.com', 'sofialvarado811@gmail.com'],
     post: 12
-  }
+  },
+  {
+    name: 'Jose Monteza',
+    email: 'josemonteza838@gmail.com',
+    photoUser: '../assets/images/user1.jpg',
+    poster: '../assets/images/portada1.jpg',
+    password: 'jose12345',
+    age: 38,
+    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'lauralucialopez56@gmail.com', 'rf9718087@gmail.com', 'rosem6427@gmail.com', 'as2382968@gmail.com', 'kevinlaos61@gmail.com', 'sg560591@gmail.com', 'sofialvarado811@gmail.com'],
+    post: 23
+  },
+  {
+    name: 'Rocio Flores',
+    email: 'rf9718087@gmail.com',
+    photoUser: '../assets/images/user1.jpg',
+    poster: '../assets/images/portada1.jpg',
+    password: 'rocioF12345',
+    age: 40,
+    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'lauralucialopez56@gmail.com', 'josemonteza838@gmail.com', 'rosem6427@gmail.com', 'as2382968@gmail.com', 'kevinlaos61@gmail.com', 'sg560591@gmail.com', 'sofialvarado811@gmail.com'],
+    post: 10
+  },
+  {
+    name: 'Rose Martinez',
+    email: 'rosem6427@gmail.com',
+    photoUser: '../assets/images/user1.jpg',
+    poster: '../assets/images/portada1.jpg',
+    password: 'rose12345',
+    age: 25,
+    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'lauralucialopez56@gmail.com', 'josemonteza838@gmail.com', 'rf9718087@gmail.com', 'as2382968@gmail.com', 'kevinlaos61@gmail.com', 'sg560591@gmail.com', 'sofialvarado811@gmail.com'],
+    post: 25
+  },
+  {
+    name: 'Andrea Sanchez',
+    email: 'as2382968@gmail.com',
+    photoUser: '../assets/images/user1.jpg',
+    poster: '../assets/images/portada1.jpg',
+    password: 'andreaS12345',
+    age: 30,
+    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'lauralucialopez56@gmail.com', 'josemonteza838@gmail.com', 'rf9718087@gmail.com', 'rosem6427@gmail.com', 'kevinlaos61@gmail.com', 'sg560591@gmail.com', 'sofialvarado811@gmail.com'],
+    post: 9
+  },
+  {
+    name: 'Kevin Laos',
+    email: 'kevinlaos61@gmail.com',
+    photoUser: '../assets/images/user1.jpg',
+    poster: '../assets/images/portada1.jpg',
+    password: 'kevinL12345',
+    age: 20,
+    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'lauralucialopez56@gmail.com', 'josemonteza838@gmail.com', 'rf9718087@gmail.com', 'rosem6427@gmail.com', 'as2382968@gmail.com', 'sg560591@gmail.com', 'sofialvarado811@gmail.com'],
+    post: 30
+  },
+  {
+    name: 'Sandra Gomez',
+    email: 'sg560591@gmail.com',
+    photoUser: '../assets/images/user1.jpg',
+    poster: '../assets/images/portada1.jpg',
+    password: 'sandraG12345',
+    age: 28,
+    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'lauralucialopez56@gmail.com', 'josemonteza838@gmail.com', 'rf9718087@gmail.com', 'rosem6427@gmail.com', 'as2382968@gmail.com', 'kevinlaos61@gmail.com', 'sofialvarado811@gmail.com'],
+    post: 26
+  },
+  {
+    name: 'Sofia Alvarado',
+    email: 'sofialvarado811@gmail.com',
+    photoUser: '../assets/images/user1.jpg',
+    poster: '../assets/images/portada1.jpg',
+    password: 'sofiA12345',
+    age: 43,
+    contacts: ['carrillopedro158@gmail.com', 'mt5545316@gmail.com', 'lauralucialopez56@gmail.com', 'josemonteza838@gmail.com', 'rf9718087@gmail.com', 'rosem6427@gmail.com', 'as2382968@gmail.com', 'kevinlaos61@gmail.com', 'sg560591@gmail.com'],
+    post: 20
+  },
   ],
   post = [{
     email: 'lauralucialopez56@gmail.com',
@@ -44,6 +114,34 @@ var dataUsers = [
     email: 'carrillopedro158@gmail.com',
     text: '#Recuerda  Próximo 22 de enero, asiste a la presentación de los libros "MARÍA Y YO" y "MARÍA CUMPLE 20 AÑOS", de Miguel Gallardo, destacado historietista español.   La cita es en la Librería Rosario Castellanos #CDMX, 7:30 pm. También estará presente Gerardo Gaya, director de #IluminemosdeAzul .      No es necesario registrarse, sólo llega con anticipación al evento.  ENTRADA LIBRE, CUPO LIMITADO.',
     
-  }
+  },
+  {
+    email: 'josemonteza838@gmail.com',
+    text: 'alguien sabe donde dan terapias cerca de carabayllo???',
+  },
+  {
+    email: 'rf9718087@gmail.com',
+    text: 'Hey!! tienen que ir a este evento https://www.facebook.com/events/1538586356439320/',
+  },
+  {
+    email: 'rosem6427@gmail.com',
+    text: 'gracias por las recomendaciones lauralucialopez56@gmail.com!!!!!!!!!!!!!',
+  },
+  {
+    email: 'as2382968@gmail.com',
+    text: 'eh quedado facinada con los videos que encontre en esta pagina http://aletheia.com.pe',
+  },
+  {
+    email: 'kevinlaos61@gmail.com',
+    text: 'alguien mas asistira a este evento https://www.facebook.com/events/1538586356439320/',
+  },
+  {
+    email: 'sg560591@gmail.com',
+    text: 'a mi hijo y a mi nos encantaron los videos....gracias as2382968@gmail.com!!!',
+  },
+  {
+    email: 'sofialvarado811@gmail.com',
+    text: ' <3 <3 <3 <3 thanks!!!',
+  },
   ]
 ];

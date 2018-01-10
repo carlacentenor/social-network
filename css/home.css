@@ -6,6 +6,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: rgb(231, 231, 231);
+}
+
 .img-user {
   width: 2.5em;
   height: 2.5em;
@@ -44,11 +48,15 @@
   margin: 0;
 }
 
+.white{
+  background-color: white;
+}
+
 .user-name {
   font-weight: 900;
   position: relative;
-  bottom: 5em;
-  font-weight: 900;
+  bottom: 4em;
+  font-size: 25px;
 }
 
 .user-name-post-new{
@@ -85,6 +93,7 @@
 }
 
 .border-post,.border-post-contact {
+  background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.23);
   padding: 1em;
   word-wrap: break-word;
@@ -94,6 +103,7 @@
 
 .border-post p {
   margin-top: 10px;
+  text-align: justify;
 
 }
 
@@ -111,6 +121,14 @@
 
 .box-img-post {
   overflow: auto;
+}
+
+.color{
+  background-color: white;
+}
+
+.black-font {
+  color: black;
 }
 
 .post-user {
@@ -161,6 +179,7 @@
 
 .info-user-profile {
   padding: 1em;
+  
 }
 
 .img-user-contact{
@@ -196,10 +215,7 @@
   margin: 10px 0;
 }
 
-.center, .rigth , .left{
-  outline: 1px solid red;
-  float: left;
-}
+
 
 .background-poster{
   width: 100%;
@@ -207,12 +223,16 @@
   background-position: center bottom;
   background-size: cover;
 }
-
-#center{
-  width: 100%;
+.center, .rigth , .left{
+  
+  float: left;
 }
 
 @media only screen and (min-width: 993px) {
+
+  #test1 {
+    padding: 0;
+  }
 .user{
   text-align: left;
 }
@@ -221,6 +241,19 @@
   top: 8em;
   bottom: 0;
 
+}
+
+nav .brand-logo{
+ margin-left: 10px; 
+}
+
+.center{
+  padding: 0;
+}
+
+.rigth , .left {
+  padding: 1em;
+  margin: 1em 0;
 }
 
 
@@ -232,5 +265,9 @@
  
 }
 
+.subtitle{
+  color: var(--green);
+  font-size: 25px;
+}
 
 }

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -13,6 +14,34 @@ body {
   overflow: hidden;
 }
 
+.inline-block{
+  display: inline-block;
+}
+
+.container-register {
+  height: 100vh;
+  display: flex;
+  padding: 2em;
+  align-items: center;
+}
+
+.splash {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #ffffff, rgb(10, 255, 222));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-splash {
+  text-align: center;
+}
+
+.img-logo-splash {
+  width: 170px;
+}
+
 
 /* principal */
 
@@ -21,6 +50,38 @@ body {
   width: 100px;
   margin-top: -70px;
 } */
+
+.border-register {
+  padding: 1em;
+  width: 100%;
+  height: auto;
+}
+
+.img-logo-white {
+  width: 160px;
+}
+
+.box-btn {
+  text-align: center;
+}
+
+.box-btn a {
+  display: block;
+  color: white;
+  border: 2px solid white;
+  margin: 2em auto 0 auto;
+  border-radius: 20px;
+}
+
+.box-btn a:hover {
+  background-color: white;
+  color: #009974;
+  font-weight: 800;
+}
+
+.box-img-register {
+  text-align: center;
+}
 
 .two-buttons {
   margin-top: 100px;
@@ -45,6 +106,24 @@ body {
   border: 1px solid rgb(0, 0, 0);
 }
 
+.absolute{
+  position: absolute;
+  width: 25%;
+}
+
+.absolute p {
+  display: inline-block;
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+  text-align: center;
+}
+
+.absolute img {
+  width: 50%;
+  display: inline-block;
+  
+}
 
 /* splash */
 
@@ -83,23 +162,41 @@ body {
   width: 100%;
 }
 
+
 /*Loader spinner*/
 
 .loader {
   color: #009974;
   font-size: 10px;
   margin: 100px auto;
-  margin-left: 176px;
   width: .8em;
   height: .8em;
   border-radius: 50%;
   position: relative;
   text-indent: -9999em;
-  -webkit-animation: load4 2.5s infinite linear;
-  animation: load4 2.5s infinite linear;
+  -webkit-animation: load4 4s infinite linear;
+  animation: load4 4s infinite linear;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+@media only screen and (min-width: 600px) {
+  .border-register {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .row .col {
+    padding: 4em;
+  }
+  .box-btn a {
+    background-color: transparent;
+    border: 1px solid #009974;
+    color: #009974;
+  }
+  .container-register {
+    padding-right: 0;
+  }
 }
 
 @-webkit-keyframes load4 {

@@ -73,7 +73,7 @@ $(document).ready(function() {
         text: textPost });
       console.log(dataUsers[1]);
       btnPost.attr('disabled', false);
-      boxPost.append('<div class="border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +
+      boxPost.prepend('<div class="border-post"><div class="box-img-post"><figure class="border-photo-post-user" >' +
     '<img class="img-user-post" src=' + imgUser + '>' +
   '</figure>' +
   '<p class="user-name-post">' + nameUser + '</p></div><div class=""><p>' + textPost + '</p></div><div class="comment"><i class="small material-icons align">favorite_border</i><i class="small material-icons align">comment</i></div> </div>');

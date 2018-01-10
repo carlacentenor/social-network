@@ -7,13 +7,12 @@
 }
 
 body {
-  background-image: url('../assets/images/principal.jpg');
+  background-image: url('../assets/images/cyan.jpg');
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  overflow: hidden;
 }
 
 .img-user {
@@ -249,7 +248,7 @@ body {
 .size-img {
   width: 190px;
   height: 150px;
-  border: 2px solid rgb(5, 126, 70);
+  border: 2px solid rgb(0, 0, 0);
   float: left;
 }
 
@@ -261,17 +260,13 @@ body {
   display: block;
 }
 
-.size-img3 {
-  width: 190px;
-  height: 150px;
-  border: 2px solid rgb(0, 0, 0);
-  margin: 20px;
-  display: block;
-}
 
 .background {
   background-image: url('../assets/images/fondo-mono.jpg');
   width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
 }
 
@@ -285,4 +280,14 @@ body {
   text-align: center;
   font-family: 'Pacifico', cursive;
   margin: 10px 0;
+}
+/* cards */
+
+.cards {
+  width: 200px;
+  height: 100px;
+}
+
+.card .card-image .card-title {
+  color: black;
 }

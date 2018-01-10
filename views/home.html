@@ -115,20 +115,25 @@
           </a>
         </div>
         <div id="test2" class="col s12">
-          <p class="title">Agrega a tus amigos</p>
+          <p class="title">Eventos</p>
           <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">account_circle</i>
-                  <input id="icon_prefix" type="text" class="validate">
-                  <label for="icon_prefix">Ingresa email</label>
+            <div class="col s12 m7">
+              <div class="card">
+                <div class="card-image">
+                  <img src="../assets/images/foto1.jpg">
+                  <span class="card-title">Confederación Autismo España</span>
                 </div>
-                <button class="btn #00bfa5 teal accent-4">Add</button>
+                <div class="card-content">
+                  <p>Es una asociación para la atención de personas con autismo y trastornos generalizados del desarrollo en la región de Murcia.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Asistire</a>
+                </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
+
         <div id="test3" class="col s12 list-contact">
           <p class="title">Mis Contactos</p>
           <input type="text" class="search-contact" placeholder="Ingresa email">
@@ -144,7 +149,7 @@
               href="#modal1">
             <img class="circle size-img2 img-responsive waves-effect waves-light modal-trigger" src="../assets/images/mono.gif" alt="rompecabezas"
               href="#modal2">
-            <img class="circle size-img img-responsive waves-effect waves-light modal-trigger" src="../assets/images/play.gif" alt="play"
+            <img class="circle size-img img-responsive waves-effect waves-light modal-trigger" src="../assets/images/galli.gif" alt="play"
               href="#modal3">
           </span>
           <!-- Modal Trigger -->
@@ -185,7 +190,7 @@
               <div class="container">
                 <div class="row">
                   <div class="col s12 col m12 col l12">
-                      <h4 class="title-modal">Monosilabo</h4>
+                    <h4 class="title-modal">Monosilabo</h4>
                     <video controls class="img-responsive size-video">
                       <source src="../assets/images/mono.mp4" type="video/mp4"></source>
                     </video>
@@ -194,63 +199,76 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <article class="rigth col l2 hide-on-med-and-down border-post">
-        <p>Noticias</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In harum illum, mollitia illo nostrum dolorem unde consequuntur
-          ut reiciendis porro, cum tenetur consequatur assumenda eligendi obcaecati optio enim laboriosam cupiditate?
-        </p>
-        <div>
-
-        </div>
-
-      </article>
-      </div>
-    </div>
-
-    <!-- Modal Structure -->
-    <div id="modal1" class="modal modalClear">
-      <div class="modal-content">
-
-        <section class="box-new-post">
-          <div class="user">
-            <figure class="border-photo-user">
-              <img class="img-user-post-new" alt="">
-            </figure>
-            <p class="user-name-post-new"></p>
-
+          <div id="modal3" class="modal modal-fixed-footer">
+            <div class="modal-content">
+              <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat close">x</a>
+              <h4></h4>
+              <div class="container">
+                <div class="row">
+                  <div class="col s12 col m12 col l12">
+                    <h4 class="title-modal">Gallina Pintadita</h4>
+                    <video controls class="img-responsive size-video">
+                      <source src="../assets/images/pollito.mp4" type="video/mp4"></source>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <article class="rigth col l2 hide-on-med-and-down border-post">
+          <p>Noticias</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In harum illum, mollitia illo nostrum dolorem unde consequuntur
+            ut reiciendis porro, cum tenetur consequatur assumenda eligendi obcaecati optio enim laboriosam cupiditate?
+          </p>
           <div>
-            <textarea class="post-user" name="" id="post-user" cols="30" rows="10" placeholder="¿Qué deseas compartir?"></textarea>
 
           </div>
-          <a href="#">
-            <i class="material-icons">insert_photo</i>
+
+        </article>
+      </div>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal modalClear">
+        <div class="modal-content">
+
+          <section class="box-new-post">
+            <div class="user">
+              <figure class="border-photo-user">
+                <img class="img-user-post-new" alt="">
+              </figure>
+              <p class="user-name-post-new"></p>
+
+            </div>
+            <div>
+              <textarea class="post-user" name="" id="post-user" cols="30" rows="10" placeholder="¿Qué deseas compartir?"></textarea>
+
+            </div>
+            <a href="#">
+              <i class="material-icons">insert_photo</i>
+            </a>
+
+
+          </section>
+
+
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-post">Compartir
+            <i class="material-icons ">send</i>
           </a>
 
-
-        </section>
-
-
+        </div>
       </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-post">Compartir
-          <i class="material-icons ">send</i>
-        </a>
 
-      </div>
-    </div>
-
-    <script src=”../vendors/js/prefixfree.min.js” type="text/javascript"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="../vendors/js/jquery-3.2.1.min.js"></script>
-    <script src="../vendors/materialize/js/materialize.min.js"></script>
-    <script src="../js/data.js"></script>
-    <script src="../js/register.js"></script>
-    <script src="../js/home.js"></script>
-    <script src="../js/xilofono.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+      <script src="../vendors/js/jquery-3.2.1.min.js"></script>
+      <script src="../vendors/materialize/js/materialize.min.js"></script>
+      <script src="../js/data.js"></script>
+      <script src="../js/register.js"></script>
+      <script src="../js/home.js"></script>
+      <script src="../js/xilofono.js"></script>
 </body>
 
 </html>

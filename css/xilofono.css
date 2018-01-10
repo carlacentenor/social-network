@@ -102,3 +102,7 @@
 .modal.modal-fixed-footer .modal-content {
   overflow: hidden;
 }
+
+.modal.modal-fixed-footer {
+  background-image: url('../assets/images/fondo0.jpg')
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,26 +25,19 @@
     firebase.initializeApp(config);
   </script>
 </head>
-
 <body>
-  <main class="container-register row">
-    
-  <div class="border-register col m5 offset-m6">
-    
-      
-        <div class="box-img-register">
-          <img class="img-logo-white hide-on-med-and-up" src="../assets/images/logo-white.png" alt="logo">
-          <img class="img-logo-white hide-on-small-only" src="../assets/images/our-kids-logo2.png" alt="logo">
-          </div>
-          <div class="box-btn">
-              <a class="waves-effect waves-light modal-trigger btn  " href="#modal2">Login</a>
-          <a class="waves-effect waves-light modal-trigger btn  " href="#modal1">Signup</a>
-          
-        </div>
-      
-    
-  </div>
-</main>
+  <main class="container-register row"> 
+    <div class="border-register col m5 offset-m6">
+      <div class="box-img-register">
+        <img class="img-logo-white hide-on-med-and-up" src="../assets/images/logo-white.png" alt="logo">
+        <img class="img-logo-white hide-on-small-only" src="../assets/images/our-kids-logo2.png" alt="logo">
+      </div>
+      <div class="box-btn">
+        <a class="waves-effect waves-light modal-trigger btn  " href="#modal2">Login</a>
+        <a class="waves-effect waves-light modal-trigger btn  " href="#modal1">Signup</a>
+      </div>
+    </div>
+  </main>
   <!-- Modal Structure -->
   <div id="modal1" class="modal center">
     <div class="modal-content">
@@ -63,7 +55,6 @@
       <button onclick="registrar()" class="modal-action modal-close waves-effect waves-green btn-style btn btn-register" disabled>Next</button>
     </div>
   </div>
-
   <!-- Modal Structure -->
   <div id="modal2" class="modal center">
     <div class="modal-content">
@@ -83,10 +74,10 @@
   </div>
   <div id="contenido">
   </div>
+  
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <script src="../js/data.js"></script>
   <script src="../js/register.js"></script>
 </body>
-
 </html>

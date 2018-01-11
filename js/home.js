@@ -60,7 +60,6 @@ $(document).ready(function() {
     }
   }
 
-
   // FUnciónn Limpiar TextArea Post del modal 
   function clear() {
     $('.modalClear .post-user').val('');

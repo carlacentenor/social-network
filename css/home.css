@@ -15,12 +15,12 @@ body {
   width: 100%;
 }
 
-.btn-style{
+.btn-style {
   background: var(--green);
   color: white;
 }
 
-.btn-style:disabled{
+.btn-style:disabled {
   border: none;
 }
 
@@ -43,15 +43,16 @@ body {
   border: 5px solid white;
 }
 
-.img-user-post-new{
+.img-user-post-new {
   width: 5em;
   height: 5em;
   border-radius: 100px;
 }
 
-.padd1{
+.padd1 {
   padding: 0 1em;
 }
+
 .user {
   margin: 0 auto;
   width: 100%;
@@ -65,30 +66,28 @@ body {
   margin: 0;
 }
 
-.white{
+.white {
   background-color: white;
 }
 
 .user-name {
   font-weight: 900;
   position: relative;
-  
   font-size: 25px;
 }
 
-.name-profile{
+.name-profile {
   bottom: 4em;
   color: #66757F;
-  
+  text-transform: capitalize;
 }
 
 .user-name-poster {
   bottom: 5em;
 }
 
-.user-name-post-new{
+.user-name-post-new {
   font-weight: 900;
-  
   margin: 5px;
 }
 
@@ -119,19 +118,24 @@ body {
   margin-left: 10px;
 }
 
-.border-post,.border-post-contact {
+.border-post,
+.border-post-contact {
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.23);
   padding: 1em;
   word-wrap: break-word;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin-bottom: 10px;
+  text-align: left;
+  border-radius: 10px;
 }
 
 .border-post p {
   margin-top: 10px;
   text-align: justify;
-
+  position: relative;
+  bottom: .5em;
+  
 }
 
 .border-post-contact p {
@@ -139,7 +143,6 @@ body {
   position: relative;
   bottom: 1em;
   font-size: 20px;
-  
 }
 
 .box-post-new {
@@ -150,7 +153,7 @@ body {
   overflow: auto;
 }
 
-.color{
+.color {
   background-color: white;
 }
 
@@ -178,6 +181,7 @@ body {
   font-weight: 900;
   position: relative;
   bottom: 4px;
+  text-transform: capitalize;
 }
 
 .border-photo-post-user {
@@ -203,38 +207,38 @@ body {
 .inline-block {
   display: inline-block;
 }
-.float-l{
+
+.float-l {
   float: left;
 }
 
 .info-user-profile {
   padding: 1em;
-  
+  margin: 1em;
+  border-radius: 10px;
 }
 
-.img-user-contact{
+.img-user-contact {
   width: 20%;
-
 }
 
-
-.comment{
+.comment {
   text-align: right;
 }
 
-.align{
-  margin:0 10px;
+.align {
+  margin: 0 10px;
   color: #66757F;
   cursor: pointer;
 }
 
-.star{
+.star {
   color: rgb(255, 230, 0);
   position: relative;
   bottom: .5em;
 }
 
-.title{
+.title {
   font-size: 2.5em;
   color: #66757F;
   text-align: center;
@@ -242,48 +246,52 @@ body {
   margin: 10px 0;
 }
 
+.info-user-profile-dk {
+  padding: 1em;
+  border-radius: 10px;
+  font-size: 12px;
+}
 
-.center, .rigth , .left{
+.center,
+.rigth,
+.left {
   /* outline: 1px solid red; */
   float: left;
 }
 
-
-.background-poster{
+.background-poster {
   width: 100%;
   height: 40vh;
   background-position: center bottom;
   background-size: cover;
 }
-.center, .rigth , .left{
-  
+
+.center,
+.rigth,
+.left {
   float: left;
 }
+
 
 /*estilos de los juegos */
 
 .size-img {
   width: 190px;
   height: 150px;
-  border: 2px solid rgb(0, 0, 0);
   float: left;
-  
 }
 
 .size-img2 {
   width: 190px;
   height: 150px;
-  border: 2px solid rgb(0, 0, 0);
   float: right;
   display: block;
 }
 
-
-.subtitle{
+.subtitle {
   color: var(--green);
   font-size: 25px;
 }
-
 
 .background {
   background-image: url('../assets/images/fondo-mono.jpg');
@@ -298,10 +306,11 @@ body {
   padding: 0;
 }
 
-
-#test3,#test4{
+#test3,
+#test4 {
   padding: 1em;
 }
+
 .title-modal {
   font-size: 2.5em;
   color: rgb(0, 0, 0);
@@ -309,6 +318,8 @@ body {
   font-family: 'Pacifico', cursive;
   margin: 10px 0;
 }
+
+
 /* cards */
 
 .cards {
@@ -320,61 +331,94 @@ body {
   color: black;
 }
 
-.pd10{
+.pd10 {
   padding: 1em;
 }
 
-.side-nav li > a{
+.side-nav li>a {
   width: 100%;
 }
 
-@media only screen and (min-width: 601px)  {
-  
-  .size-img{
+.game-mobile {
+  margin: 1em;
+}
+
+.circle{
+  width: 170px;
+  height: 170px;
+  border-radius: 100px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+@media only screen and (min-width: 601px) {
+  .size-img {
     width: 7em;
     height: 7em;
     border-radius: 50%;
     margin-right: 1em;
   }
-  
-    #test1 {
-      padding: 0;
-    }
-  .user{
+  #test1 {
+    padding: 0;
+  }
+  .user {
     text-align: left;
   }
-  
-  .img-user-profile{
+  .img-user-profile {
     top: 8em;
     bottom: 0;
-  
   }
-  
-  nav .brand-logo{
-   margin-left: 10px; 
+  nav .brand-logo {
+    margin-left: 10px;
   }
-  
-  .center{
+  .center {
     padding: 0 10px;
   }
-  
-  .rigth , .left {
+  .rigth,
+  .left {
     padding: 1em;
     margin: 1em 0;
   }
-  
-  
-  .user-name{
+  .user-name {
     text-align: center;
     font-size: 20px;
     font-weight: 400;
     text-shadow: 1px 1px 4px #66757F;
-   
+    text-transform: capitalize;
   }
-  
-  }
+}
 
-  .img-carrusel {
-    width: 200px;
-    height: 180px;
-  }
+.img-carrusel {
+  width: 200px;
+  height: 180px;
+}
+
+#previsualizacion {
+  width: 25%;
+}
+
+.font-title{
+  font-family: 'Days One', sans-serif;
+}
+
+.font-subtitle{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25;
+  color: var(--green);
+  margin: 0;
+}
+
+.game-mobile{
+  width: 100%;
+}
+
+.left-game{
+  float: left;
+}
+
+.rigth-game{
+  float: right;
+}
+
+.auto{
+  overflow: auto;
+}

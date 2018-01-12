@@ -14,7 +14,7 @@ body {
   overflow: hidden;
 }
 
-.inline-block{
+.inline-block {
   display: inline-block;
 }
 
@@ -42,7 +42,9 @@ body {
   width: 170px;
 }
 
-
+#previsualizacion{
+  width: 25%;
+}
 /* principal */
 
 
@@ -103,19 +105,18 @@ body {
   background-color: rgba(104, 177, 104, 0);
   color: black;
   border-radius: 5px;
-  
 }
 
-.btn-style{
+.btn-style {
   background-color: #009974;
   color: white;
 }
 
-#alg-center{
+#alg-center {
   text-align: center;
 }
 
-.absolute{
+.absolute {
   position: absolute;
   width: 25%;
 }
@@ -131,12 +132,12 @@ body {
 .absolute img {
   width: 50%;
   display: inline-block;
-  
 }
 
-.modal{
+.modal {
   padding: 1em;
 }
+
 
 /* splash */
 
@@ -173,6 +174,14 @@ body {
 .grad70 {
   background: linear-gradient(to bottom right, #ffffff, rgb(10, 255, 222));
   width: 100%;
+}
+
+.message{
+  text-align: center;
+  padding: 1em;
+  color: white;
+ font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 

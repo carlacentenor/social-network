@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Our Kids</title>
+  <link href="https://fonts.googleapis.com/css?family=Days+One|Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,21 +14,16 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="icon" href="../assets/images/our-kids.png">
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
   <script>
     // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyAXr5SfXVJQ_jCyB8w33CaaNZPuTPZeQAI",
-      authDomain: "our-kids-47772.firebaseapp.com",
-      databaseURL: "https://our-kids-47772.firebaseio.com",
-      projectId: "our-kids-47772",
-      storageBucket: "our-kids-47772.appspot.com",
-      messagingSenderId: "208252014214"
-    };
-    firebase.initializeApp(config);
   </script>
 </head>
+
 <body>
-  <main class="container-register row"> 
+  <main class="container-register row">
     <div class="border-register col m5 offset-m6">
       <div class="box-img-register">
         <img class="img-logo-white hide-on-med-and-up" src="../assets/images/logo-white.png" alt="logo">
@@ -36,30 +33,41 @@
         <a class="waves-effect waves-light modal-trigger btn  " href="#modal2">Login</a>
         <a class="waves-effect waves-light modal-trigger btn  " href="#modal1">Signup</a>
       </div>
+      <div class="message"></div>
     </div>
   </main>
   <!-- Modal Structure -->
   <div id="modal1" class="modal center">
     <div class="modal-content">
-      <div class="input-field">
         <h3>Sign up</h3>
-        <i class="material-icons prefix">account_circle</i>
-        <input id="email" type="email" placeholder="Ingresa email">
-      </div>
-      <div class="input-field">
-        <i class="material-icons prefix">lock</i>
-        <input id="password-register" type="password" placeholder="Ingresa contraseña">
-      </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="icon_prefix" type="text" class="validate name-register">
+            <label for="icon_prefix">First Name</label>
+          </div>
+          <div class="input-field col s6">
+              <i class="material-icons prefix">email</i>
+              <input id="icon_prefix" type="text" class="validate email-register">
+              <label for="icon_prefix">Email</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">lock</i>
+                <input id="icon_prefix" type="password" class="validate password-register">
+                <label for="icon_prefix">Password</label>
+              </div>
+      
+      
+      
     </div>
     <div class="modal-footer " id="alg-center">
-      <button onclick="registrar()" class="modal-action modal-close waves-effect waves-green btn-style btn btn-register" disabled>Next</button>
+      <button class="modal-action modal-close waves-effect waves-green btn-style btn btn-register" disabled>Next</button>
     </div>
   </div>
   <!-- Modal Structure -->
   <div id="modal2" class="modal center">
     <div class="modal-content">
+      <h4>Login</h4>
       <div class="input-field">
-        <h4>Login</h4>
         <i class="material-icons prefix">account_circle</i>
         <input id="email2" class="email-login" type="email" placeholder="Ingresa email">
       </div>
@@ -67,17 +75,20 @@
         <i class="material-icons prefix">lock</i>
         <input class="password-login" id="contraseña2" type="password" placeholder="Ingresa contraseña">
       </div>
+      
       <div class="modal-footer" id="alg-center">
-        <button onclick="ingreso()" class="modal-action modal-close waves-effect waves-green btn btn-style btn-login " disabled>Next</button>
+        <button onclick="" class="modal-action modal-close waves-effect waves-green btn btn-style btn-login " disabled>Next</button>
       </div>
     </div>
   </div>
   <div id="contenido">
   </div>
-  
+
   <script src="../vendors/js/jquery-3.2.1.min.js"></script>
   <script src="../vendors/materialize/js/materialize.min.js"></script>
   <script src="../js/data.js"></script>
-  <script src="../js/register.js"></script>
+  <!--<script src="../js/register.js"></script>-->
+  <script src="../js/user.js"></script>
 </body>
+
 </html>

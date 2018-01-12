@@ -126,17 +126,17 @@ function observador() {
       var displayName = user.displayName;
 
       var email = user.email;
-
-      console.log('*************************');
-      console.log(user.emailVerified);
-      console.log('*************************');
-
-
       var emailVerified = user.emailVerified;
       var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
+
+      console.log('*************************');
+      console.log(user.emailVerified);
+      console.log('*************************');
+
+     
       // ...
     } else {
       // User is signed out.
@@ -146,6 +146,19 @@ function observador() {
   });
 }
 observador();
+
+
+function verificar() {
+  var user = firebase.auth().currentUser;
+  user.sendEmailVerification().then(function() {
+    // Email sent.
+    console.log('Enviando correo....');
+    alert('Revisa tu bandeja de Entrada, te hemos enviado un correo de confirmación');
+  }).catch(function(error) {
+    // An error happened.
+    console.log(error);
+  });
+}
 
 
 function cerrar() {
@@ -162,14 +175,3 @@ $('.close').on('click', function() {
   cerrar();
 });
 
-function verificar() {
-  var user = firebase.auth().currentUser;
-  user.sendEmailVerification().then(function() {
-    // Email sent.
-    console.log('Enviando correo....');
-    alert('Revisa tu bandeja de Entrada, te hemos enviado un correo de confirmación');
-  }).catch(function(error) {
-    // An error happened.
-    console.log(error);
-  });
-}

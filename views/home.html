@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="../assets/images/our-kids.png">
+  <link href="https://fonts.googleapis.com/css?family=Days+One|Montserrat" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -16,14 +17,14 @@
   <header>
     <nav class="nav-extended #00bfa5 teal accent-4">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Our Kids</a>
+        <a href="#" class="brand-logo font-title">Our Kids</a>
         <img class="img-user" src="" alt="">
         <a href="#" data-activates="mobile-demo" class="button-collapse">
           <i class="material-icons">menu</i>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="hide-on-med-and-up">
-            <a href="profile.html">Mi Perfil</a>
+            <a href="profile.html" c>Mi Perfil</a>
           </li>
           <li>
             <a href="register.html" class="close">Cerrar Sesión</a>
@@ -60,7 +61,7 @@
           </li>
           <li class="tab">
             <a href="#test3">
-              <i class="material-icons">search</i>
+              <i class="material-icons">people</i>
             </a>
           </li>
           <li class="tab">
@@ -76,9 +77,9 @@
     <div class="row">
       <article class="left col l3 hide-on-med-and-down ">
         <div class="border-post">
-          <p class="subtitle">Mi Perfil</p>
-          <hr>
-          <div class="info-user-profile ">
+          <p class="font-subtitle">Mi Perfil</p>
+          
+          <div class="info-user-profile-dk">
             <div class="email-profile ">
               <i class="material-icons color ">mail_outline</i>
               <p class="inline-block"></p>
@@ -87,23 +88,21 @@
               <i class="material-icons color ">cake</i>
               <p class="inline-block"></p>
             </div>
-            <div class="contacts-profile ">
-              <i class="material-icons color">people_outline</i>
-              <p class="inline-block"></p>
-            </div>
+            
           </div>
         </div>
       </article>
       <div class="center col s12 col l7">
         <div id="test1" class="col s12">
-          <div class="container-post">
+          <div class="container-post">  
+            <div class="post-new"></div>
           </div>
           <a class="btn-floating btn-large waves-effect waves-light #00bfa5 teal accent-4 new-post modal-trigger" href="#modalx">
             <i class="material-icons">add</i>
           </a>
         </div>
         <div id="test2" class="col s12">
-          <p class="title">Organizaciones de Ayuda</p>
+         
           <div class="row">
             <div class="col s12 col m12 col l12 ">
               <div class="carousel">
@@ -130,7 +129,7 @@
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
           <div class="modal-content">
-            <h4 class="title">Entra a mi mundo</h4>
+            <h4 class="font-subtitle">Entra a mi mundo</h4>
             <p>Fundación en la cual mejoran la calidad de vida de las personas con Autismo.</p>
             <p>Trabajan permanentemente en beneficio de:
               <br> Niños, adolescentes, jóvenes y adultos portadores de trastornos del espectro autista, a saber, Síndrome Autista,
@@ -151,7 +150,7 @@
         <!-- Modal Structure -->
         <div id="modal2" class="modal">
           <div class="modal-content">
-            <h4 class="title">FUNDASOCENIA</h4>
+            <h4 class="font-subtitle">FUNDASOCENIA</h4>
             <p>
               FUNDASOCENIA es una institución sin fines de lucro, fundada el 30 de Enero de 1986 por un grupo de padres, profesionales
               y amigos identificados con esta causa, Queremos promover el bienestar general de las personas con trastorno
@@ -169,7 +168,7 @@
         <!-- Modal Structure -->
         <div id="modal3" class="modal">
           <div class="modal-content">
-            <h4 class="title">Autismo en Voz Alta</h4>
+            <h4 class="font-subtitle">Autismo en Voz Alta</h4>
             <p>
               <br>La Fundación AUTISMO EN VOZ ALTA es una organización sin fines de lucro dedicada a proporcionar una alternativa
               educativa integral de calidad para personas con trastornos del espectro autista, apoyando así su integración
@@ -188,7 +187,7 @@
         <!-- Modal Structure -->
         <div id="modal5" class="modal">
           <div class="modal-content">
-            <h4 class="title">Fundacion Besitos Salados</h4>
+            <h4 class="font-subtitle">Fundacion Besitos Salados</h4>
             <p>
               Somos un asociacion civil que apoya a personas con fibrosis quística de escasos recursos, buscamos un diagnóstico oportuno
               de esta enfermedad, apoyamos a las personas afectadas con consultas médicas, medicamentos, suplementos nutricionales
@@ -205,7 +204,7 @@
         <!-- Modal Structure -->
         <div id="modal6" class="modal">
           <div class="modal-content">
-            <h4 class="title">Frente al Autismo</h4>
+            <h4 class="font-subtitle">Frente al Autismo</h4>
             <p>Por que el Autismo tiene cura.</p>
             <p>
               <br> Hemos integrado esfuerzos y creado alianzas con todos los que comparten con nosotros su trabajo constante
@@ -223,21 +222,28 @@
         <!-- cierre modal -->
 
         <div id="test3" class="col s12 list-contact">
-          <p class="title">Mis Contactos</p>
+          
           <div class="contacts">
           </div>
         </div>
         <div id="test4" class="col s12 col m12 col l12 ">
-          <div class="background pd10">
-            <p class="title">Mis Favoritos</p>
-            <span class="hide-on-med-and-up">
-              <img class="circle size-img img-responsive waves-effect waves-light modal-trigger" src="../assets/images/music.gif" alt="xilofono"
-                href="#modal7">
-              <img class="circle size-img2 img-responsive waves-effect waves-light modal-trigger" src="../assets/images/mono.gif" alt="rompecabezas"
-                href="#modal8">
-              <img class="circle size-img img-responsive waves-effect waves-light modal-trigger" src="../assets/images/galli.gif" alt="play"
+          <div class="pd10">
+            
+            <div class="hide-on-med-and-up">
+              <div class="game-mobile auto">
+                  <img class="circle left-game modal-trigger" src="../assets/images/music.gif" alt="xilofono"
+                  href="#modal7">
+              </div>
+              <div  class="game-mobile auto">
+                  <img class="circle right-game modal-trigger" src="../assets/images/mono.gif" alt="rompecabezas"
+                  href="#modal8">
+              </div>
+             <div class="game-mobile auto">
+                <img class="circle left-game modal-trigger" src="../assets/images/galli.gif" alt="play"
                 href="#modal9">
-            </span>
+             </div>
+              
+            </div>
             <div class="box-game hide-on-small-only">
               <div class="game border-post">
                 <img class=" size-img float-l  waves-effect waves-light modal-trigger" src="../assets/images/music.gif" alt="xilofono" href="#modal7">
@@ -327,8 +333,8 @@
       </div>
       <article class="rigth col l2 hide-on-med-and-down ">
         <div class="border-post">
-          <p class="subtitle">Noticias</p>
-          <hr>
+          <p class="font-subtitle">Noticias</p>
+          
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In harum illum, mollitia illo nostrum dolorem unde consequuntur
             ut reiciendis porro, cum tenetur consequatur assumenda eligendi obcaecati optio enim laboriosam cupiditate?</p>
         </div>
@@ -347,9 +353,18 @@
             <div>
               <textarea class="post-user" name="" id="post-user" cols="30" rows="10" placeholder="¿Qué deseas compartir?"></textarea>
             </div>
-            <a href="#">
-              <i class="material-icons">insert_photo</i>
-            </a>
+          
+            <div class="file-field input-field">
+              <div class="btn">
+                <span>File</span>
+                <input type="file" id="imagen">
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" >
+              </div>
+            </div>
+            <img id="previsualizacion">
+            
           </section>
           <div class="modal-footer">
             <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-post">Compartir
@@ -363,8 +378,10 @@
     <script src="../vendors/js/jquery-3.2.1.min.js"></script>
     <script src="../vendors/materialize/js/materialize.min.js"></script>
     <script src="../js/data.js"></script>
-    <script src="../js/register.js"></script>
-    <script src="../js/home.js"></script>
+    <!--<script src="../js/register.js"></script>
+    <script src="../js/home.js"></script>-->
+ 
+    <script src="../js/database.js"></script>
     <script src="../js/xilofono.js"></script>
 </body>
 </html>

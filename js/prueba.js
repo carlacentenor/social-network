@@ -13,8 +13,8 @@ $(document).ready(function() {
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
-  $('.btn-google').click(function() {
-    // event.preventDefault();
+  $('.btn-google').click(function(event) {
+    event.preventDefault();
     firebase.auth().signInWithPopup(provider).then(function(result) {
    
     // ...

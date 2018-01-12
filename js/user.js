@@ -20,11 +20,11 @@ $(document).ready(function() {
   var validatePassword = false;
   var validateEmail = false;
   var validateName = false;
-  
+
 
   emailRegister.on('keyup', function(event) {
     var EMAILUSER = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
-    
+
     if (EMAILUSER.test($(this).val())) {
       validateEmail = true;
       validateRegister();
@@ -32,8 +32,8 @@ $(document).ready(function() {
       inactiveRegister();
     }
   });
-  
-  
+
+
   passwordRegisterNew.on('keyup', function(event) {
     if (passwordRegisterNew.val()) {
       validatePassword = true;
@@ -51,10 +51,10 @@ $(document).ready(function() {
       inactiveRegister();
     }
   });
-  
+
   emailLogin.on('keyup', function(event) {
     var EMAILUSER = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
-    
+
     if (EMAILUSER.test($(this).val())) {
       validateEmail = true;
       validateUser();
@@ -62,7 +62,7 @@ $(document).ready(function() {
       inactiveUser();
     }
   });
-  
+
   passwordLogin.on('keyup', function(event) {
     if (passwordLogin.val()) {
       validatePassword = true;
@@ -71,24 +71,24 @@ $(document).ready(function() {
       inactiveUser();
     }
   });
-  
+
   function validateUser() {
     if (validateEmail && validatePassword) {
       $('.btn-login').attr('disabled', false);
     }
   }
-  
-  
+
+
   function validateRegister() {
     if (validateEmail && validatePassword && validateName) {
       $('.btn-register').attr('disabled', false);
     }
   }
-  
+
   function inactiveRegister() {
     $('.btn-register').attr('disabled', 'disabled');
   }
-  
+
   function inactiveUser() {
     $('.btn-login').attr('disabled', 'disabled');
   }
@@ -96,30 +96,29 @@ $(document).ready(function() {
 
   var database = firebase.database();
   var reference = database.ref('users');
-  var imgUser, nameUser, postUser, posterUser; 
+  var imgUser, nameUser, postUser, posterUser;
   var email;
   var password;
   var users = {};
-  
+
 
   $('.btn-register').click(function() {
     $('.error').remove();
     var emailRegister = $('.email-register').val();
     var passwordRegisterNew = $('.password-register').val();
     var nameUser = $('.name-register').val();
-    
 
-    reference.push(
-      {
-        name: nameUser,
-        email: emailRegister,
-        password: passwordRegisterNew,
-        imagen: '../assets/images/userdefault.png',
-        poster: '../assets/images/portada2.jpg'
-          
-      }, function() {
-        alert('Se registro correctamente');
-      });
+
+    reference.push({
+      name: nameUser,
+      email: emailRegister,
+      password: passwordRegisterNew,
+      imagen: '../assets/images/userdefault.png',
+      poster: '../assets/images/portada2.jpg'
+
+    }, function() {
+      alert('Se registro correctamente');
+    });
   });
 
   $('.btn-login').click(function() {
@@ -128,17 +127,38 @@ $(document).ready(function() {
     reference.on('value', function(datos) {
       users = datos.val();
       var arrayUser = Object.values(users);
-      for (i = 0 ; i < arrayUser.length ;i++) {
+      for (i = 0; i < arrayUser.length; i++) {
         if (arrayUser[i].email === emailLogin.val() && arrayUser[i].password === passwordLogin.val()) {
           id = arrayUser[i];
           localStorage.email = id.email;
-          
+
           window.location.href = 'home.html';
-        } 
+        }
       }
       $('.message').append('<p class="error">Email o contraseña incorrecta</p>');
     }, function(objetoError) {
       console.log('Error de lectura:' + objetoError.code);
+    });
+  });
+
+  // Login con Google
+  var provider = new firebase.auth.GoogleAuthProvider();
+  $('.btn-google').on('click', function() {
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // The signed-in user info.
+      var user = result.user;
+      // ...
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+      // ...
     });
   });
 });

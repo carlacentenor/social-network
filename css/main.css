@@ -184,7 +184,28 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.btn-google{
+background-color: #F32E06;
+color: white;
+padding: .7em;
+border-radius: 10px;
+}
 
+.btn-facebook{
+background-color: #4B80BD;
+color: white;
+padding: .7em;
+border-radius: 10px;
+}
+
+.box-login-sn{
+  margin-top: 1em; 
+  padding: .5em;
+}
+
+.box-login-sn span {
+  margin-right: 10px;
+}
 /*Loader spinner*/
 
 .loader {

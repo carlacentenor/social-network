@@ -55,8 +55,8 @@ $(document).ready(function() {
         $('.img-user-profile').attr('src', imagendefault);
         $('.user-name-post').text(id.name);
         $('.email-profile  p').text(id.email);
-        $('.poster').css('background-image', 'url("' + imgPosterDefault + '")');
-        $('.background-poster').css('background-image', 'url("' + imgPosterDefault + '")');
+        $('.poster').css('background-image', 'url("' + id.posterPhoto + '")');
+        $('.background-poster').css('background-image', 'url("' + id.posterPhoto + '")');
       }
     }
   }, function(objetoError) {

@@ -92,115 +92,115 @@ $(document).ready(function() {
   function inactiveUser() {
     $('.btn-login').attr('disabled', 'disabled');
   }
-
-
-  var database = firebase.database();
-  var reference = database.ref('users');
-  var imgUser, nameUser, postUser, posterUser;
-  var email;
-  var password;
-  var users = {};
-
+  
 
   $('.btn-register').click(function() {
-    $('.error').remove();
-    var emailRegister = $('.email-register').val();
-    var passwordRegisterNew = $('.password-register').val();
-    var nameUser = $('.name-register').val();
+    firebase.auth().createUserWithEmailAndPassword(emailRegister.val(), passwordRegisterNew.val())
+      .catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
 
-
-    reference.push({
-      name: nameUser,
-      email: emailRegister,
-      password: passwordRegisterNew,
-      imagen: '../assets/images/userdefault.png',
-      poster: '../assets/images/portada2.jpg'
-
-    }, function() {
-      alert('Se registro correctamente');
-    });
-  });
-
-  $('.btn-login').click(function() {
-    event.preventDefault();
-    $('.error').remove();
-    reference.on('value', function(datos) {
-      users = datos.val();
-      var arrayUser = Object.values(users);
-      for (i = 0; i < arrayUser.length; i++) {
-        if (arrayUser[i].email === emailLogin.val() && arrayUser[i].password === passwordLogin.val()) {
-          id = arrayUser[i];
-          localStorage.email = id.email;
-
+    firebase.auth().onAuthStateChanged(function(user) {
+      var userNew = nameRegisterNew.val();    
+      if (user) {
+        firebase.database().ref('users/' + user.uid).set({
+          name: userNew,
+          email: user.email,
+          uid: user.uid,
+          profilePhoto: 'https://firebasestorage.googleapis.com/v0/b/our-kids-47772.appspot.com/o/userdefault.png?alt=media&token=ff44fe35-e341-45e5-914c-05878f0d72dd'
+        }).then(user => {
           window.location.href = 'home.html';
-        }
-      }
-      $('.message').append('<p class="error">Email o contraseña incorrecta</p>');
-    }, function(objetoError) {
-      console.log('Error de lectura:' + objetoError.code);
-    });
-  });
-
-
-  // Login con Google
-  var provider = new firebase.auth.GoogleAuthProvider();
-  $('.btn-google').on('click', function() {
-    event.preventDefault();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      var token = result.credential.accessToken;
-      
-      var user = result.user;
-    
-      firebase.database().ref('users/' + user.uid).set({
-        name: user.displayName,
-        email: user.email,
-        uid: user.uid,
-        profilePhoto: user.photoURL
-      }).then(
-        user => {
-          $(location).attr('href', 'home.html');
         });
-    }).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-      // ...
+      } else {
+        
+      }
     });
   });
 
- 
-  // Obteniendo datos del usuario actual
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // User is signed in.
-      var name = user.displayName;
-      var email = user.email;
-      var photoUrl = user.photoURL;
-      var uid = user.uid;
 
-      $('.user-name').text(name);
-      $('.user-name-post-new').text(name);
-      $('.img-user').attr('src', photoUrl);
-      $('.img-user-post-new').attr('src', photoUrl);
-      $('.img-user-profile').attr('src', photoUrl);
-      // $('.poster').css('background-image', 'url("' + posterUser + '")');
-      // $('.background-poster').css('background-image', 'url("' + posterUser + '")');
-      $('.email-profile  p').text(email);
-    } else {
-      // No user is signed in.
-    }
+  // Autentificación por email y password
+  
+  $('.btn-login').click(function(event) {
+    event.preventDefault();
+
+    var email = emailLogin.val();
+    var password = passwordLogin.val();
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        $(location).attr('href', 'home.html');
+      }
+    });
   });
+});
 
-  $('.close').click(function() {
-    firebase.auth().signOut().then(function() {
-      alert('Gracias ');
-      $(location).attr('href', 'register.html');
-    }).catch(function(error) {
+
+// Login con Google
+var provider = new firebase.auth.GoogleAuthProvider();
+$('.btn-google').on('click', function() {
+  event.preventDefault();
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    var token = result.credential.accessToken;
+
+    var user = result.user;
+
+    firebase.database().ref('users/' + user.uid).set({
+      name: user.displayName,
+      email: user.email,
+      uid: user.uid,
+      profilePhoto: user.photoURL
+    }).then(
+      user => {
+        $(location).attr('href', 'home.html');
+      });
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+});
+
+
+// Obteniendo datos del usuario actual
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var name = user.displayName;
+    var email = user.email;
+    var photoUrl = user.photoURL;
+    var uid = user.uid;
+
+    $('.user-name').text(name);
+    $('.user-name-post-new').text(name);
+    $('.img-user').attr('src', photoUrl);
+    $('.img-user-post-new').attr('src', photoUrl);
+    $('.img-user-profile').attr('src', photoUrl);
+    // $('.poster').css('background-image', 'url("' + posterUser + '")');
+    // $('.background-poster').css('background-image', 'url("' + posterUser + '")');
+    $('.email-profile  p').text(email);
+  } else {
+    // No user is signed in.
+  }
+});
+
+$('.close').click(function() {
+  firebase.auth().signOut().then(function() {
+    $(location).attr('href', 'register.html');
+  }).catch(function(error) {
     // An error happened.
-    });
+
   });
 });

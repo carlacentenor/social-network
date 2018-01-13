@@ -27,7 +27,7 @@ $(document).ready(function() {
           for (i = 0; i < arrayUser.length; i++) {
             if (arrayUser[i].uid === uid) {
               var id = arrayUser[i];
-                            
+                            console.log(id.name);
               $('.user-name').text(id.name);
               $('.user-name-post-new').text(id.name);
               $('.img-user').attr('src', id.profilePhoto);

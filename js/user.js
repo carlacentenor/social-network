@@ -172,16 +172,7 @@ $(document).ready(function() {
     });
   });
 
-  $('.close').click(function() {
-    firebase.auth().signOut().then(function() {
-      // Sign-out successful.
-      console.log('Cerrando sesión...');
-      $(location).attr('href', 'login.html');
-    }).catch(function(error) {
-      // An error happened.
-    });
-  });
-
+ 
   // Obteniendo datos del usuario actual
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
@@ -202,5 +193,14 @@ $(document).ready(function() {
     } else {
       // No user is signed in.
     }
+  });
+
+  $('.close').click(function() {
+    firebase.auth().signOut().then(function() {
+      alert('Gracias ');
+      $(location).attr('href', 'register.html');
+    }).catch(function(error) {
+    // An error happened.
+    });
   });
 });

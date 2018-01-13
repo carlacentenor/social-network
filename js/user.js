@@ -93,7 +93,7 @@ $(document).ready(function() {
     $('.btn-login').attr('disabled', 'disabled');
   }
   
-
+  
   $('.btn-register').click(function() {
     firebase.auth().createUserWithEmailAndPassword(emailRegister.val(), passwordRegisterNew.val())
       .catch(function(error) {
@@ -104,16 +104,17 @@ $(document).ready(function() {
     firebase.auth().onAuthStateChanged(function(user) {
       var userNew = nameRegisterNew.val();    
       if (user) {
+        // Ingresando datos en la base de datos
         firebase.database().ref('users/' + user.uid).set({
           name: userNew,
           email: user.email,
           uid: user.uid,
           profilePhoto: 'https://firebasestorage.googleapis.com/v0/b/our-kids-47772.appspot.com/o/userdefault.png?alt=media&token=ff44fe35-e341-45e5-914c-05878f0d72dd'
         }).then(user => {
-          window.location.href = 'home.html';
+          console.log('Usuario Registrado');
         });
       } else {
-        
+        console.log(error);
       }
     });
   });
@@ -130,6 +131,7 @@ $(document).ready(function() {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .catch(function(error) {
         // Handle Errors here.
+        console.log('Usuario y/o contraseña incorrecta');
         var errorCode = error.code;
         var errorMessage = error.message;
       });
@@ -140,67 +142,45 @@ $(document).ready(function() {
       }
     });
   });
-});
 
 
-// Login con Google
-var provider = new firebase.auth.GoogleAuthProvider();
-$('.btn-google').on('click', function() {
-  event.preventDefault();
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-    var token = result.credential.accessToken;
+  // Login con Google
+  var provider = new firebase.auth.GoogleAuthProvider();
+  $('.btn-google').on('click', function() {
+    event.preventDefault();
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+      var token = result.credential.accessToken;
 
-    var user = result.user;
+      var user = result.user;
 
-    firebase.database().ref('users/' + user.uid).set({
-      name: user.displayName,
-      email: user.email,
-      uid: user.uid,
-      profilePhoto: user.photoURL
-    }).then(
-      user => {
-        $(location).attr('href', 'home.html');
-      });
-  }).catch(function(error) {
+      firebase.database().ref('users/' + user.uid).set({
+        name: user.displayName,
+        email: user.email,
+        uid: user.uid,
+        profilePhoto: user.photoURL
+      }).then(
+        user => {
+          $(location).attr('href', 'home.html');
+        });
+    }).catch(function(error) {
     // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
     // ...
+    });
   });
-});
 
 
-// Obteniendo datos del usuario actual
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    var name = user.displayName;
-    var email = user.email;
-    var photoUrl = user.photoURL;
-    var uid = user.uid;
-
-    $('.user-name').text(name);
-    $('.user-name-post-new').text(name);
-    $('.img-user').attr('src', photoUrl);
-    $('.img-user-post-new').attr('src', photoUrl);
-    $('.img-user-profile').attr('src', photoUrl);
-    // $('.poster').css('background-image', 'url("' + posterUser + '")');
-    // $('.background-poster').css('background-image', 'url("' + posterUser + '")');
-    $('.email-profile  p').text(email);
-  } else {
-    // No user is signed in.
-  }
-});
-
-$('.close').click(function() {
-  firebase.auth().signOut().then(function() {
-    $(location).attr('href', 'register.html');
-  }).catch(function(error) {
+  $('.close').click(function() {
+    firebase.auth().signOut().then(function() {
+      $(location).attr('href', 'register.html');
+    }).catch(function(error) {
     // An error happened.
 
+    });
   });
 });

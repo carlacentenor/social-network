@@ -9,9 +9,10 @@ $(document).ready(function() {
 
   // Firebase
   var database = firebase.database();
+  var storage = firebase.storage();
   var reference = database.ref('users');
   var referencePost = database.ref('post');
-  var storage = firebase.storage();
+  
   var file;
   var downloadURL;
   $('#imagen').change(function(event) {

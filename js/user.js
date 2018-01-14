@@ -20,8 +20,7 @@ $(document).ready(function() {
   var validatePassword = false;
   var validateEmail = false;
   var validateName = false;
-
-
+  
   emailRegister.on('keyup', function(event) {
     var EMAILUSER = /^[a-zA-Z0-9\._-]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,3}$/;
 

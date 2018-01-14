@@ -189,6 +189,11 @@ background-color: #F32E06;
 color: white;
 padding: .7em;
 border-radius: 10px;
+transition: .5s;
+}
+
+.btn-google:hover {
+  background-color: rgb(202, 36, 3);
 }
 
 .btn-facebook{
@@ -196,7 +201,13 @@ background-color: #4B80BD;
 color: white;
 padding: .7em;
 border-radius: 10px;
+transition: .5s;
 }
+
+.btn-facebook:hover {
+  background-color: rgb(43, 96, 156);
+}
+
 
 .box-login-sn{
   margin-top: 1em; 

@@ -176,6 +176,36 @@ $(document).ready(function() {
     });
   });
 
+  var providerFacebook = new firebase.auth.FacebookAuthProvider();
+  $('.btn-facebook').on('click', function() {
+    event.preventDefault();
+    firebase.auth().signInWithPopup(providerFacebook).then(function(result) {
+      var token = result.credential.accessToken;
+
+      var user = result.user;
+
+      firebase.database().ref('users/' + user.uid).set({
+        name: user.displayName,
+        email: user.email,
+        uid: user.uid,
+        profilePhoto: user.photoURL,
+        posterPhoto: 'https://firebasestorage.googleapis.com/v0/b/our-kids-47772.appspot.com/o/portada.png?alt=media&token=bbdfc01f-73ee-40b5-b1ca-91347557e0bb'
+      }).then(
+        user => {
+          $(location).attr('href', 'home.html');
+        });
+    }).catch(function(error) {
+    // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // The email of the user's account used.
+      var email = error.email;
+      // The firebase.auth.AuthCredential type that was used.
+      var credential = error.credential;
+    // ...
+    });
+  });
+
 
   $('.close').click(function() {
     firebase.auth().signOut().then(function() {

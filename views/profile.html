@@ -1,66 +1,113 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="../assets/images/our-kids.png">
-    <link href="https://fonts.googleapis.com/css?family=Days+One|Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <title>Home</title>
-  </head>
-  <body>
-    <header>
-      <nav class="nav-extended #00bfa5 teal accent-4">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo font-title">Our Kids</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="profile.html">Mi Perfil</a></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="#">Cerrar Sesión</a></li>
-          </ul>
-          <ul class="side-nav" id="mobile-demo">
-            <li><a href="profile.html">Mi Perfil</a></li>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="register.html">Cerrar Sesión</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <section>
-      <div class="poster"></div>
-      <div class="user">
-        <figure class="border-photo-user">
-          <img class="img-user-profile" src="" alt="">
-        </figure>
-        <p class="user-name name-profile"></p>     
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="../assets/images/our-kids.png">
+  <link href="https://fonts.googleapis.com/css?family=Days+One|Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <title>Home</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-extended #00bfa5 teal accent-4">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo font-title">Our Kids</a>
+        <a href="#" data-activates="slide-out" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="profile.html">Mi Perfil</a>
+          </li>
+          <li>
+            <a href="home.html">Home</a>
+          </li>
+          <li>
+            <a href="#">Cerrar Sesión</a>
+          </li>
+        </ul>
+        <ul id="slide-out" class="side-nav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img class="" src="../assets/images/fondito.jpg">
+              </div>
+              <a href="#!user">
+                <img class="circle" id="circle-photo">
+              </a>
+              <a href="#!name">
+                <span class="white-text name name-menu"></span>
+              </a>
+              <a href="#!email">
+                <span class="white-text email email-menu"></span>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="home.html">
+              <i class="material-icons">home</i>Home</a>
+          </li>
+          <li>
+            <a href="profile.html">
+              <i class="material-icons">sentiment_very_satisfied</i>Perfil</a>
+          </li>
+          <li>
+            <a href="register.html" class="close">
+              <i class="material-icons">settings_power</i>Cerrar Sesión</a>
+          </li>
+        </ul>
       </div>
-      <div class="info-user-profile border-post">
-        <div class="email-profile ">
-          <i class="material-icons color ">mail_outline</i>
-          <p class="inline-block black-font"></p>
-        </div>
-        <div class="age-profile ">
-          <i class="material-icons color ">cake</i>
-          <p class="inline-block black-font"></p>
-        </div>
-        <div class="contacts-profile ">
-          <i class="material-icons color">people_outline</i>
-          <p class="inline-block black-font"></p>
+    </nav>
+  </header>
+  <section>
+    <div class="poster"></div>
+    <div class="user">
+      <figure class="border-photo-user">
+        <img class="img-user-profile " src="../assets/images/portadad.png" alt="">
+      </figure>
+      <p class="user-name name-profile"></p>
+    </div>
+    <div class="info-user-profile border-post">
+      <div class="email-profile ">
+        <i class="material-icons color ">mail_outline</i>
+        <p class="inline-block black-font"></p>
+      </div>
+      <div class="age-profile ">
+        <i class="material-icons color ">cake</i>
+        <p class="inline-block black-font">23 de Diciembre</p>
+      </div>
+      <div class="contacts-profile ">
+        <i class="material-icons color">location_on</i>
+        <p class="inline-block black-font">Lima,Perú</p>
+      </div>
+      <hr>
+      <div class="center-align">
+        <div class="friends inline-block">
+          <p class="color">Amigos</p>
+          <p>23</p>
+        </div >
+        <div class="friends inline-block">
+          <p class="color">
+            Seguidores
+          </p>
+          <p>45</p>
         </div>
       </div>
-    </section>
-        
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="../vendors/js/jquery-3.2.1.min.js"></script>
-    <script src="../vendors/materialize/js/materialize.min.js"></script>
-    <script src="../js/data.js"></script>
-    
-    <script src="../js/database.js"></script>
-  </body> 
+    </div>
+  </section>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script src="../vendors/js/jquery-3.2.1.min.js"></script>
+  <script src="../vendors/materialize/js/materialize.min.js"></script>
+
+  <script src="../js/user.js"></script>
+  <script src="../js/home2.js"></script>
+</body>
+
 </html>

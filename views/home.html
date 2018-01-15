@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/icons/icomoon/style.css">
   <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
   <link rel="stylesheet" href="../css/home.css">
   <link rel="stylesheet" href="../css/xilofono.css">
@@ -19,7 +20,7 @@
       <div class="nav-wrapper">
         <a href="#" class="brand-logo font-title">Our Kids</a>
         <img class="img-user" src="" alt="">
-        <a href="#" data-activates="mobile-demo" class="button-collapse">
+        <a href="#" data-activates="slide-out" class="button-collapse">
           <i class="material-icons">menu</i>
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -30,19 +31,26 @@
             <a href="register.html" class="close">Cerrar Sesión</a>
           </li>
         </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li>
-            <a href="profile.html">Mi Perfil</a>
-          </li>
-          <li>
-            <a href="register.html" class="close">Cerrar Sesión</a>
-          </li>
-        </ul>
+        <ul id="slide-out" class="side-nav">
+            <li><div class="user-view">
+              <div class="background">
+                <img class="" src="../assets/images/fondito.jpg">
+              </div>
+              <a href="#!user"><img class="circle" id="circle-photo"></a>
+              <a href="#!name"><span class="white-text name name-menu"></span></a>
+              <a href="#!email"><span class="white-text email email-menu"></span></a>
+            </div></li>
+            <li><a href="home.html"><i class="material-icons">home</i>Home</a></li>
+            <li><a href="profile.html"><i class="material-icons">sentiment_very_satisfied</i>Perfil</a></li>
+            <li><a href="register.html" class="close"><i class="material-icons">settings_power</i>Cerrar Sesión</a></li>
+          </ul>
+          
+             
       </div>
       <div class="background-poster hide-on-med-and-down">
         <div class="user">
           <figure class="border-photo-user">
-            <img class="img-user-profile" src="" alt="">
+            <img class="img-user-profile" src="../assets/images/portadad.png" alt="">
           </figure>
           <p class="user-name user-name-poster"></p>
         </div>
@@ -86,24 +94,93 @@
             </div>
             <div class="age-profile ">
               <i class="material-icons color ">cake</i>
-              <p class="inline-block"></p>
+              <p class="inline-block">23 de Diciembre</p>
             </div>
-            
+            <div class="contacts-profile ">
+                <i class="material-icons color">location_on</i>
+                <p class="inline-block black-font">Lima,Perú</p>
+              </div>
+              <hr>
+              <div class="center-align">
+                  <div class="friends inline-block">
+                    <p class="color">Amigos</p>
+                    <p>23</p>
+                  </div >
+                  <div class="friends inline-block">
+                    <p class="color">
+                      Seguidores
+                    </p>
+                    <p>45</p>
+                  </div>
+                </div>
           </div>
         </div>
+        <div class="border-post">
+            <div class="row">
+                <div class="col s12 m12">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="../assets/images/new3.jpg">
+                      <span class="card-title wfont">25 de Setiembre</span>
+                    </div>
+                    <div class="card-content">
+                      <p>Jornadas Formativas Aprendiendo Juntos Sobre Autismo en Chihuahua (México).</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="https://autismodiario.org/2017/09/15/jornadas-formativas-aprendiendo-juntos-autismo-chihuahua-mexico/">Ver más</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col s12 m12">
+                    <div class="card">
+                      <div class="card-image">
+                        <img src="../assets/images/new4.jpg">
+                        <span class="card-title wfont">22 de Abril</span>
+                      </div>
+                      <div class="card-content">
+                        <p>Jornadas Formativas Aprendiendo Juntos Sobre Autismo en Chihuahua (México).</p>
+                      </div>
+                      <div class="card-action">
+                        <a href="https://autismodiario.org/2017/09/15/jornadas-formativas-aprendiendo-juntos-autismo-chihuahua-mexico/">Ver más</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                    
+
+        </div>
+
+      
+            
+                    
+
+        
       </article>
-      <div class="center col s12 col l7">
+      <div class="center col s12 col l6">
         <div id="test1" class="col s12">
           <div class="container-post">  
             <div class="post-new"></div>
           </div>
-          <a class="btn-floating btn-large waves-effect waves-light #00bfa5 teal accent-4 new-post modal-trigger" href="#modalx">
+         <!-- <a class="btn-floating btn-large waves-effect waves-light #00bfa5 teal accent-4 new-post modal-trigger" href="#modalx">
             <i class="material-icons">add</i>
-          </a>
+          </a>-->
+          <div class="fixed-action-btn horizontal click-to-toggle">
+            <a class="btn-floating btn-large waves-effect waves-light #00bfa5 teal accent-4">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul>
+              <li><a class="btn-floating #00838f cyan darken-3  modal-trigger" href="#modalx"><i class="material-icons">create</i></a></li>
+              <li><a class="btn-floating #00b8d4 cyan accent-4" href="chat.html"><i class="material-icons">question_answer</i></a></li>
+              
+            </ul>
+          </div>
+                
         </div>
         <div id="test2" class="col s12">
-         
-          <div class="row">
+                   
+        <div class="row">
             <div class="col s12 col m12 col l12 ">
               <div class="carousel">
                 <a class="carousel-item" href="#one!">
@@ -229,13 +306,13 @@
         <div id="test4" class="col s12 col m12 col l12 ">
           <div class="pd10">
             
-            <div class="hide-on-med-and-up">
+           <div class="hide-on-med-and-up">
               <div class="game-mobile auto">
                   <img class="circle left-game modal-trigger" src="../assets/images/music.gif" alt="xilofono"
                   href="#modal7">
               </div>
               <div  class="game-mobile auto">
-                  <img class="circle right-game modal-trigger" src="../assets/images/mono.gif" alt="rompecabezas"
+                  <img class="circle rigth-game modal-trigger" src="../assets/images/mono.gif" alt="rompecabezas"
                   href="#modal8">
               </div>
              <div class="game-mobile auto">
@@ -244,27 +321,60 @@
              </div>
               
             </div>
+
+
             <div class="box-game hide-on-small-only">
-              <div class="game border-post">
-                <img class=" size-img float-l  waves-effect waves-light modal-trigger" src="../assets/images/music.gif" alt="xilofono" href="#modal7">
-                <p class="display-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi illum aliquam esse nesciunt impedit odit iusto,
-                  dicta tempore amet temporibus repellendus autem sit aliquid quia eaque cum dolorem deleniti neque.</p>
-              </div>
-              <div class="game border-post">
-                <img class=" size-img float-l waves-effect waves-light modal-trigger" src="../assets/images/mono.gif" alt="rompecabezas"
-                  href="#modal8">
-                <p class="display-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia omnis debitis rem eum recusandae quis labore,
-                  aspernatur neque pariatur, fugit unde asperiores voluptatem. Corrupti asperiores ad ut quisquam? Impedit,
-                  nihil.
-                </p>
-              </div>
-              <div class="game border-post ">
-                <img class=" size-img waves-effect float-l waves-light modal-trigger" src="../assets/images/galli.gif" alt="play" href="#modal9">
-                <p class="display-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. In inventore pariatur sunt, debitis quasi tenetur
-                  porro nihil placeat reiciendis numquam aperiam corrupti ullam harum provident, illo ducimus dolor impedit
-                  earum.
-                </p>
-              </div>
+                <div class="row">
+                    <div class="col s12 m12">
+                      <div class="card">
+                        <div class="card-image">
+                          <img src="../assets/images/music.gif" class="modal-trigger" href="#modal7">
+                          <span class="card-title">Xilofono</span>
+                        </div>
+                        <div class="card-content">
+                          <p>La música es una buena fuente de relajación</p>
+                        </div>
+                        <div class="card-action">
+                          <a href="#modal7">Pruebalo</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col s12 m12">
+                        <div class="card">
+                          <div class="card-image">
+                            <img src="../assets/images/mono.gif" alt="rompecabezas" class="modal-trigger" href="#modal8">
+                            <span class="card-title">Xilofono</span>
+                          </div>
+                          <div class="card-content">
+                            <p>Las animaciones del siguiente video te van a sacar una sonrisa</p>
+                          </div>
+                          <div class="card-action">
+                            <a href="#modal8">Pruebalo</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m12">
+                          <div class="card">
+                            <div class="card-image">
+                              <img src="../assets/images/galli.gif" alt="play" class="modal-trigger" href="#modal9">
+                              <span class="card-title">Xilofono</span>
+                            </div>
+                            <div class="card-content">
+                              <p>Las animaciones del siguiente video te van a sacar una sonrisa</p>
+                            </div>
+                            <div class="card-action">
+                              <a href="#modal9">Pruebalo</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+  
+
+
             </div>
             <!-- Modal Trigger -->
             <!-- Modal Structure -->
@@ -331,13 +441,46 @@
           </div>
         </div>
       </div>
-      <article class="rigth col l2 hide-on-med-and-down ">
+    
+      <article class="rigth col l3 hide-on-med-and-down ">
         <div class="border-post">
           <p class="font-subtitle">Noticias</p>
           
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In harum illum, mollitia illo nostrum dolorem unde consequuntur
-            ut reiciendis porro, cum tenetur consequatur assumenda eligendi obcaecati optio enim laboriosam cupiditate?</p>
-        </div>
+          <div class="row">
+              <div class="col s12 ">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="../assets/images/new1.jpg">
+                   
+                  </div>
+                  <div class="card-content">
+                    <p>Clemencia Vallejos, directora de Educación Básica Especial del Minedu, explicó que los pirotécnicos tienen un efecto negativo en las personas con TEA porque perciben los sonidos con una mayor intensidad que otras. (Difusión.</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="https://elcomercio.pe/lima/sucesos/ministerio-educacion-recomendo-pirotecnicos-evitar-afectar-ninos-autismo-noticia-483128">Ver mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col s12 ">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="../assets/images/new2.jpeg">
+                     
+                    </div>
+                    <div class="card-content">
+                      <p>“Ser diferente no es una enfermedad. Es algo que todos somos en mayor o menor medida”.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="https://elcomercio.pe/opinion/columnistas/autistas-santiago-roncagliolo-noticia-458229">Ver mas</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                  
+        
+          </div>
       </article>
 
       <!-- Modal Structure -->
@@ -356,20 +499,20 @@
           
             <div class="file-field input-field">
               <div class="btn">
-                <span>File</span>
+                <span><i class="material-icons">add_a_photo</i></span>
                 <input type="file" id="imagen">
               </div>
               <div class="file-path-wrapper">
                 <input class="file-path validate" type="text" >
               </div>
             </div>
-            <img id="previsualizacion">
+            
             
           </section>
           <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat btn-post">Compartir
+            <button  class="modal-action modal-close btn">
               <i class="material-icons ">send</i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -377,11 +520,13 @@
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="../vendors/js/jquery-3.2.1.min.js"></script>
     <script src="../vendors/materialize/js/materialize.min.js"></script>
-    <script src="../js/data.js"></script>
+    
+   
+
     <!--<script src="../js/register.js"></script>
     <script src="../js/home.js"></script>-->
- 
-    <script src="../js/database.js"></script>
+ <script src="../js/user.js"></script>
+ <script src="../js/home2.js"></script>
     <script src="../js/xilofono.js"></script>
 </body>
 </html>

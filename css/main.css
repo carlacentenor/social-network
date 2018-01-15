@@ -42,9 +42,11 @@ body {
   width: 170px;
 }
 
-#previsualizacion{
+#previsualizacion {
   width: 25%;
 }
+
+
 /* principal */
 
 
@@ -57,6 +59,19 @@ body {
   padding: 1em;
   width: 100%;
   height: auto;
+  margin: 25vh 5vh;
+}
+
+.message-ini {
+  position: absolute;
+  color: #30f7ae;
+  bottom: 1.5em;
+  left: 1em;
+  font-size: 20px;
+}
+
+.message-ini p {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .img-logo-white {
@@ -65,6 +80,7 @@ body {
 
 .box-btn {
   text-align: center;
+  padding: 0 5em;
 }
 
 .box-btn a {
@@ -176,12 +192,45 @@ body {
   width: 100%;
 }
 
-.message{
+.message {
   text-align: center;
   padding: 1em;
   color: white;
- font-size: 14px;
+  font-size: 14px;
   font-family: 'Montserrat', sans-serif;
+}
+
+.btn-google {
+  background-color: #F32E06;
+  color: white;
+  padding: .7em;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+.btn-google:hover {
+  background-color: rgb(202, 36, 3);
+}
+
+.btn-facebook {
+  background-color: #4B80BD;
+  color: white;
+  padding: .7em;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+.btn-facebook:hover {
+  background-color: rgb(43, 96, 156);
+}
+
+.box-login-sn {
+  margin-top: 1em;
+  padding: .5em;
+}
+
+.box-login-sn span {
+  margin-right: 10px;
 }
 
 
@@ -203,10 +252,21 @@ body {
   transform: translateZ(0);
 }
 
-@media only screen and (min-width: 600px) {
+#pd0 {
+  padding: 0;
+}
+
+@media only screen and (min-width: 601px) {
+  body {
+    background: linear-gradient(to right, #002359, #30f7ae);
+  }
+  .box-btn {
+    padding: 0;
+  }
   .border-register {
     background-color: white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 25vh 0;
   }
   .row .col {
     padding: 4em;

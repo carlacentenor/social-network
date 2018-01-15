@@ -1,0 +1,156 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M192 0v1024h768v-1024h-768zM576 256.33c70.51 0 127.67 57.16 127.67 127.67s-57.16 127.67-127.67 127.67-127.67-57.16-127.67-127.67 57.16-127.67 127.67-127.67v0zM768 768h-384v-64c0-70.696 57.306-128 128-128v0h128c70.696 0 128 57.304 128 128v64z",
+          "M64 64h96v192h-96v-192z",
+          "M64 320h96v192h-96v-192z",
+          "M64 576h96v192h-96v-192z",
+          "M64 832h96v192h-96v-192z"
+        ],
+        "tags": [
+          "address-book",
+          "contact",
+          "book",
+          "contacts"
+        ],
+        "defaultCode": 59716,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "address-book, contact",
+        "name": "address-book",
+        "order": 67,
+        "id": 69,
+        "prevSize": 32,
+        "code": 59716
+      },
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 68
+    },
+    {
+      "icon": {
+        "width": 1024,
+        "paths": [
+          "M384 736c0-151.234 95.874-280.486 230.032-330.2 16.28-36.538 25.968-77.164 25.968-117.8 0-159.058 0-288-192-288s-192 128.942-192 288c0 99.060 57.502 198.104 128 237.832v52.78c-217.102 17.748-384 124.42-384 253.388h397.306c-8.664-30.53-13.306-62.732-13.306-96z",
+          "M736 448c-159.058 0-288 128.942-288 288s128.942 288 288 288c159.056 0 288-128.942 288-288s-128.942-288-288-288zM896 768h-128v128h-64v-128h-128v-64h128v-128h64v128h128v64z"
+        ],
+        "tags": [
+          "user-plus",
+          "user",
+          "user-add",
+          "profile",
+          "avatar",
+          "person",
+          "member"
+        ],
+        "defaultCode": 59763,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "user-plus, user2",
+        "name": "user-plus",
+        "order": 66,
+        "id": 116,
+        "prevSize": 32,
+        "code": 59763
+      },
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 115
+    },
+    {
+      "icon": {
+        "paths": [
+          "M522.2 438.8v175.6h290.4c-11.8 75.4-87.8 220.8-290.4 220.8-174.8 0-317.4-144.8-317.4-323.2s142.6-323.2 317.4-323.2c99.4 0 166 42.4 204 79l139-133.8c-89.2-83.6-204.8-134-343-134-283 0-512 229-512 512s229 512 512 512c295.4 0 491.6-207.8 491.6-500.2 0-33.6-3.6-59.2-8-84.8l-483.6-0.2z"
+        ],
+        "tags": [
+          "google",
+          "brand"
+        ],
+        "defaultCode": 60040,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "name": "google",
+        "ligatures": "google, brand2",
+        "order": 64,
+        "id": 393,
+        "prevSize": 32,
+        "code": 60040
+      },
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 392
+    },
+    {
+      "icon": {
+        "paths": [
+          "M608 192h160v-192h-160c-123.514 0-224 100.486-224 224v96h-128v192h128v512h192v-512h160l32-192h-192v-96c0-17.346 14.654-32 32-32z"
+        ],
+        "tags": [
+          "facebook",
+          "brand",
+          "social"
+        ],
+        "defaultCode": 60048,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "facebook, brand10",
+        "name": "facebook",
+        "order": 65,
+        "id": 401,
+        "prevSize": 32,
+        "code": 60048
+      },
+      "setIdx": 1,
+      "setId": 1,
+      "iconIdx": 400
+    }
+  ],
+  "height": 1024,
+  "metadata": {
+    "name": "icomoon"
+  },
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}

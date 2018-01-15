@@ -89,6 +89,7 @@ body {
 .user-name-post-new {
   font-weight: 900;
   margin: 5px;
+  text-align: center;
 }
 
 .new-post {
@@ -135,14 +136,10 @@ body {
   text-align: justify;
   position: relative;
   bottom: .5em;
-  
 }
 
 .border-post-contact p {
   margin: 0 10px;
-  position: relative;
-  bottom: 1em;
-  font-size: 20px;
 }
 
 .box-post-new {
@@ -169,6 +166,12 @@ body {
   outline: none;
 }
 
+.line {
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+}
+
 .img-user-post {
   width: 2.5em;
   height: 2.5em;
@@ -182,6 +185,10 @@ body {
   position: relative;
   bottom: 4px;
   text-transform: capitalize;
+}
+
+.btn span {
+  margin: 0 10px;
 }
 
 .border-photo-post-user {
@@ -219,7 +226,7 @@ body {
 }
 
 .img-user-contact {
-  width: 20%;
+  width: 100%;
 }
 
 .comment {
@@ -259,11 +266,12 @@ body {
   float: left;
 }
 
-.background-poster {
+.background-poster ,.poster{
   width: 100%;
   height: 40vh;
   background-position: center bottom;
-  background-size: cover;
+  background-size: contain;
+  background-image: url('../assets/images/portadad.png');
 }
 
 .center,
@@ -288,13 +296,31 @@ body {
   display: block;
 }
 
+.box-image-post {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+#test2 {
+  height: 100vh;
+}
+
+.img-post-new {
+  width: 100%;
+}
+
 .subtitle {
   color: var(--green);
   font-size: 25px;
 }
 
 .background {
-  background-image: url('../assets/images/fondo-mono.jpg');
+  
   width: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -313,10 +339,44 @@ body {
 
 .title-modal {
   font-size: 2.5em;
-  color: rgb(0, 0, 0);
+  color: white;
   text-align: center;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Montserrat', sans-serif;
   margin: 10px 0;
+}
+
+.friends {
+  width: 45%;
+  padding: 5px;
+}
+
+.friends p {
+  text-align: center;
+  margin: 0;
+  padding: 2px;
+}
+
+.text-al-c {
+  text-align: left;
+}
+
+.follow {
+  color: var(--green);
+  background: transparent;
+  border: 2px solid var(--green);
+  padding: .4em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.title-contact {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.email-contact {
+  font-size: 12px;
+  color: #66757F;
 }
 
 
@@ -343,11 +403,79 @@ body {
   margin: 1em;
 }
 
-.circle{
+.circle {
   width: 170px;
   height: 170px;
   border-radius: 100px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.like {
+  color: #66757F;
+}
+
+.click {
+  color: rgb(255, 98, 119);
+}
+
+.follow-active {
+  background: var(--green);
+  color: white;
+}
+
+.follow-inactive {
+  background: white;
+  color: var(--green);
+}
+
+
+/*Chat*/
+
+.box-back {
+  height: 10vh;
+  width: 100%;
+  background-color: var(--green);
+  position: fixed;
+}
+
+.back {
+  color: white;
+  font-size: 16px;
+}
+
+#chat {
+  padding: 1em;
+  overflow-y: auto;
+  height: 70vh;
+  border-bottom: 1px solid grey;
+  position: relative;
+  top: 5em;
+}
+
+.box-chat {
+  width: 100%;
+  padding: 1em;
+  background-color: white;
+  height: 20vh;
+  position: fixed;
+  bottom: 0;
+}
+
+.box-message :first-child {
+  font-weight: 900;
+  margin: 0;
+}
+
+.box-message {
+  box-shadow: 1px 1px 3px grey;
+  border-radius: 5px;
+  background-color: white;
+  padding: .3em;
+  margin-bottom: 10px;
+}
+
+.text-message {
+  margin: 0;
 }
 
 @media only screen and (min-width: 601px) {
@@ -367,6 +495,9 @@ body {
     top: 8em;
     bottom: 0;
   }
+  .new {
+    bottom: 6em;
+  }
   nav .brand-logo {
     margin-left: 10px;
   }
@@ -385,6 +516,10 @@ body {
     text-shadow: 1px 1px 4px #66757F;
     text-transform: capitalize;
   }
+  #chat {
+    width: 50%;
+    margin-left: 25%;
+  }
 }
 
 .img-carrusel {
@@ -396,29 +531,35 @@ body {
   width: 25%;
 }
 
-.font-title{
+.font-title {
   font-family: 'Days One', sans-serif;
 }
 
-.font-subtitle{
+.font-subtitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 25;
   color: var(--green);
   margin: 0;
 }
 
-.game-mobile{
+.game-mobile {
   width: 100%;
 }
 
-.left-game{
+.left-game {
   float: left;
 }
 
-.rigth-game{
+.rigth-game {
   float: right;
 }
 
-.auto{
+.auto {
   overflow: auto;
+}
+
+.card .card-image .card-title {
+  color: white;
+  font-weight: 900;
+  text-shadow: 1px 1px 1px grey;
 }

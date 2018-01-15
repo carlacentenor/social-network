@@ -1,18 +1,17 @@
 # Reto SOCIAL-NETWORK
----
 ## Objetivo
+___________________________
 
 Crear una red social sobre una problemática a elegir.
 
-## Usuarios Validados
-*  lauralucialopez56@gmail.com / password :laura12345
-
-* carrillopedro158@gmail.com /password :pedro12345;
-
-* mt5545316@gmail.com / password :mariat123
-
 ## Nombre de la red Social 
-Our Kids
+## *Our Kids*
+_________________________
+
+*Our Kids es una red social que se especializa en compartir información entre usuarios, que están a cargo de niños con autismo, para que asi puedan ayudar a las personas que tienen el mismo problema que tuvieron ellos y pudieron hallar una solución efectiva.*
+
+
+![](assets/docs/kids.gif "titulo")
 
 ## Especificaciones de Desarrollo
 
@@ -36,36 +35,22 @@ Our Kids
 
 * En el desarrollo del proyecto se han utilizado diferentes tipos de efectos sobre algunos títulos e imágenes, todo esto especificado en la hoja de estilos main.css.
 
+## Recursos usados:
+________________________________
 
-## Versión Mobile
+* Materialize.
+* Firebase.
+* Jequery.
+* Trello(https://trello.com/b/ZiymCmVP/our-kids)
 
-#### Vista Splash
-![Con titulo](assets/docs/splash.png "titulo")
+## Versión desktop!
+![Con titulo](assets/docs/22p7so.gif "titulo")
 
-#### Vista 1
-![Con titulo](assets/docs/login.png "titulo")
+## Versión mobile!
+![Con titulo](assets/docs/22p8zf.gif "titulo")
 
-#### Vista 2
-![Con titulo](assets/docs/post.png "titulo")
-
-#### Vista 3
-![Con titulo](assets/docs/carrusel.png "titulo")
-
-#### Vista 4
-![Con titulo](assets/docs/contact.png "titulo")
-
-#### Vista 5
-![Con titulo](assets/docs/game.png "titulo")
-
-#### Vista 6
-![Con titulo](assets/docs/signup.png "titulo")
-
-## Versión desktop
-![Con titulo](assets/docs/desktop.png "titulo")
-![Con titulo](assets/docs/login-desktop.png "titulo")
-
-## Autenticación con firebase
-![Con titulo](assets/docs/firebase.png "titulo")
+## Firebase!!!
+![Con titulo](assets/docs/22p98t.gif "titulo")
 
 
 Realizado por Carla Centeno Ramos y Dayam LLerena Castro.

@@ -53,8 +53,6 @@ $(document).ready(function() {
               $('.new').attr('src', id.photoUrl);
               $('.email-menu').text(id.email);
               $('.email-profile  p').text(id.email);
-              $('.poster').css('background-image', 'url("' + id.posterPhoto + '")');
-              $('.background-poster').css('background-image', 'url("' + id.posterPhoto + '")');
             }
           }
         }, function(objetoError) {

@@ -69,8 +69,6 @@ $(document).ready(function() {
         $('.name-menu').text(name);
         $('.email-menu').text(email);
         $('.email-profile  p').text(email);
-        $('.poster').css('background-image', 'url("' + posterPhoto + '")');
-        $('.background-poster').css('background-image', 'url("' + posterPhoto + '")');
       }
     } else {
       // No user is signed in.

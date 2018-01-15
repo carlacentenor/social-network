@@ -162,7 +162,7 @@ $(document).ready(function() {
         email: user.email,
         uid: user.uid,
         profilePhoto: user.photoURL,
-        posterPhoto: 'https://firebasestorage.googleapis.com/v0/b/our-kids-47772.appspot.com/o/portada.png?alt=media&token=bbdfc01f-73ee-40b5-b1ca-91347557e0bb'
+        posterPhoto: 'NONE'
       }).then(
         user => {
           $(location).attr('href', 'home.html');
@@ -192,7 +192,7 @@ $(document).ready(function() {
         email: user.email,
         uid: user.uid,
         profilePhoto: user.photoURL,
-        posterPhoto: 'https://firebasestorage.googleapis.com/v0/b/our-kids-47772.appspot.com/o/portada.png?alt=media&token=bbdfc01f-73ee-40b5-b1ca-91347557e0bb'
+        posterPhoto: 'NONE'
       }).then(
         user => {
           $(location).attr('href', 'home.html');

@@ -89,6 +89,7 @@ body {
 .user-name-post-new {
   font-weight: 900;
   margin: 5px;
+  text-align: center;
 }
 
 .new-post {
@@ -137,6 +138,8 @@ body {
   bottom: .5em;
   
 }
+
+
 
 .border-post-contact p {
   margin: 0 10px;
@@ -273,7 +276,7 @@ body {
   width: 100%;
   height: 40vh;
   background-position: center bottom;
-  background-size: cover;
+  background-size: contain;
 }
 
 .center,
@@ -343,12 +346,22 @@ body {
 
 .title-modal {
   font-size: 2.5em;
-  color: rgb(0, 0, 0);
+  color: white;
   text-align: center;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Montserrat', sans-serif;
   margin: 10px 0;
 }
 
+.friends{
+  width: 45%;
+  padding: 5px;
+  
+}
+.friends p {
+  text-align: center;
+  margin: 0;
+  padding: 2px;
+}
 
 .text-al-c{
   text-align: left;
@@ -411,6 +424,9 @@ body {
   color: rgb(255, 98, 119);
 }
 
+
+
+
 .follow-active{
 background: var(--green);
 color: white;
@@ -419,6 +435,56 @@ color: white;
 .follow-inactive{
   background: white;
   color: var(--green);
+}
+
+
+/*Chat*/
+
+.box-back{
+  height: 10vh;
+  width: 100%;
+  background-color: var(--green);
+position: fixed;
+}
+
+.back {
+ color: white;
+  font-size: 16px;
+}
+
+#chat {
+  padding: 1em;
+  overflow-y: auto;
+  height: 70vh;
+  border-bottom: 1px solid grey;
+  position: relative;
+  top: 5em;
+}
+
+.box-chat {
+  width: 100%;
+  padding: 1em;
+  background-color: white;
+  height: 20vh;
+  position: fixed;
+  bottom: 0;
+}
+
+.box-message :first-child {
+  font-weight: 900;
+  margin: 0;
+}
+
+.box-message {
+  box-shadow: 1px 1px 3px grey;
+  border-radius: 5px;
+  background-color: white;
+  padding: .3em;
+  margin-bottom: 10px;
+}
+
+.text-message{
+  margin: 0;
 }
 
 
@@ -439,6 +505,11 @@ color: white;
     top: 8em;
     bottom: 0;
   }
+  
+  .new{
+   bottom: 6em;
+  }
+
   nav .brand-logo {
     margin-left: 10px;
   }
@@ -457,6 +528,14 @@ color: white;
     text-shadow: 1px 1px 4px #66757F;
     text-transform: capitalize;
   }
+
+#chat{
+  width: 50%;
+  margin-left: 25%;
+}
+
+
+
 }
 
 .img-carrusel {
@@ -493,4 +572,10 @@ color: white;
 
 .auto{
   overflow: auto;
+}
+
+.card .card-image .card-title{
+  color: white;
+  font-weight: 900;
+  text-shadow: 1px 1px 1px grey;
 }

@@ -114,12 +114,16 @@ $(document).ready(function() {
           console.log('Usuario Registrado');
         });
       } else {
-        console.log(error);
+        console.log('Error al registrar');
       }
     });
   });
 
 
+  // borrar
+ 
+
+  //
   // Autentificación por email y password
   
   $('.btn-login').click(function(event) {

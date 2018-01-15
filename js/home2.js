@@ -5,6 +5,8 @@ $(document).ready(function() {
   $('.modal').modal();
   // carrusel
   var btnPost = $('.btn-post');
+  
+  
   $('.carousel').carousel();
 
   // Firebase
@@ -40,13 +42,16 @@ $(document).ready(function() {
           for (i = 0; i < arrayUser.length; i++) {
             if (arrayUser[i].uid === uid) {
               var id = arrayUser[i];
-              console.log(id.name);
+              
               $('.user-name').text(id.name);
               $('.user-name-post-new').text(id.name);
               $('.img-user').attr('src', id.profilePhoto);
               $('.img-user-post-new').attr('src', id.profilePhoto);
               $('.img-user-profile').attr('src', id.profilePhoto);
-              $('.user-name-post').text(id.name);
+              $('#circle-photo').attr('src', id.profilePhoto);
+              $('.name-menu').text(id.name);
+              $('.new').attr('src', id.photoUrl);
+              $('.email-menu').text(id.email);
               $('.email-profile  p').text(id.email);
               $('.poster').css('background-image', 'url("' + id.posterPhoto + '")');
               $('.background-poster').css('background-image', 'url("' + id.posterPhoto + '")');
@@ -61,6 +66,10 @@ $(document).ready(function() {
         $('.img-user').attr('src', photoUrl);
         $('.img-user-post-new').attr('src', photoUrl);
         $('.img-user-profile').attr('src', photoUrl);
+        $('.new').attr('src', photoUrl);
+        $('#circle-photo').attr('src', photoUrl);
+        $('.name-menu').text(name);
+        $('.email-menu').text(email);
         $('.email-profile  p').text(email);
         $('.poster').css('background-image', 'url("' + posterPhoto + '")');
         $('.background-poster').css('background-image', 'url("' + posterPhoto + '")');
@@ -190,7 +199,7 @@ $(document).ready(function() {
 
     // Recorremos todos los contactos y los mostramos
     $.each(users, function(indice, valor) {
-      $('.contacts').append('<div class="border-post-contact name-contact "><div class="row"><div class ="col s2"><img class="img-user-contact" src=' + valor.profilePhoto + ' ></div><div class="col s7"><p class="text-al-c title-contact">' + valor.name + '</p><p class="email-contact ">' + valor.email + '</p></div><div class="col s3 center-align"><a class="follow">Seguir<span class="icon-user-plus"></span></a></div></div></div>');
+      $('.contacts').append('<div class="border-post-contact name-contact "><div class="row"><div class ="col s2"><img class="img-user-contact" src=' + valor.profilePhoto + ' ></div><div class="col s7"><p class="text-al-c title-contact">' + valor.name + '</p><p class="email-contact ">' + valor.email + '</p><p class="email-contact">Lima, Perú</p></div><div class="col s3 right-align"><a class="follow">Seguir<span class="icon-user-plus"></span></a></div></div></div>');
     });
   }, function(objetoError) {
     console.log('Error de lectura:' + objetoError.code);

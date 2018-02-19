@@ -83,7 +83,7 @@ body {
 }
 
 .user-name-poster {
-  bottom: 5em;
+  bottom: 7.5em;
 }
 
 .user-name-post-new {
@@ -446,19 +446,39 @@ body {
 #chat {
   padding: 1em;
   overflow-y: auto;
-  height: 70vh;
-  border-bottom: 1px solid grey;
+
+
   position: relative;
   top: 5em;
+}
+
+.h60{
+  height: 60vh;
+}
+
+.h20{
+  height: 20vh;
+}
+
+.relarive{
+  position: relative;
+}
+
+.max {
+max-width: 500px;
+}
+
+.h9{
+  height: 96vh;
 }
 
 .box-chat {
   width: 100%;
   padding: 1em;
   background-color: white;
-  height: 20vh;
-  position: fixed;
-  bottom: 0;
+  position: relative;
+  
+  top: 7em;
 }
 
 .box-message :first-child {
@@ -492,7 +512,7 @@ body {
     text-align: left;
   }
   .img-user-profile {
-    top: 8em;
+    top: 5em;
     bottom: 0;
   }
   .new {
@@ -504,6 +524,16 @@ body {
   .center {
     padding: 0 10px;
   }
+
+.w20 {
+  width: 25%;
+}
+
+.icon-home{
+ 
+  line-height: 1.8;
+}
+
   .rigth,
   .left {
     padding: 1em;
@@ -516,10 +546,7 @@ body {
     text-shadow: 1px 1px 4px #66757F;
     text-transform: capitalize;
   }
-  #chat {
-    width: 50%;
-    margin-left: 25%;
-  }
+  
 }
 
 .img-carrusel {
